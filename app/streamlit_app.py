@@ -114,9 +114,22 @@ st.markdown(f"""
 
 PLOTLY_LAYOUT = dict(
     paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(family="Georgia, serif", color=INK, size=13),
-    margin=dict(l=10, r=10, t=40, b=10),
+    font=dict(family="Georgia, serif", color=INK, size=16),
+    margin=dict(l=10, r=10, t=46, b=10),
 )
+
+
+def style_axes(fig):
+    """Large, dark, readable axis numbers and titles on every chart."""
+    fig.update_xaxes(tickfont=dict(size=14, color=INK),
+                     title_font=dict(size=15, color=INK),
+                     gridcolor="#E8E3D7", zerolinecolor="#D8D2C4")
+    fig.update_yaxes(tickfont=dict(size=14, color=INK),
+                     title_font=dict(size=15, color=INK),
+                     gridcolor="#E8E3D7", zerolinecolor="#D8D2C4")
+    fig.update_layout(title_font=dict(size=17, color=INK),
+                      hoverlabel=dict(font_size=14))
+    return fig
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -157,16 +170,25 @@ with st.sidebar:
     sel_label = st.selectbox("Country", keys, index=default_ix)
     sel = labels[sel_label]
 
-    g_target = st.slider("📈 GDP per-capita growth objective (%/yr)",
-                         *engine.RANGES["growth_target"], value=3.5, step=0.1)
-    co2_g = st.slider("🌱 CO2 emissions growth (%/yr) — 0 or negative",
-                      *engine.RANGES["co2_growth"], value=-2.0, step=0.5,
-                      help="Negative = emissions decline. The Paris Agreement "
-                           "requires a declining path; positive values are not allowed.")
-    un_g = st.slider("🤝 Unemployment rate growth (%/yr) — 0 or negative",
-                     *engine.RANGES["unemp_growth"], value=-2.0, step=0.5,
-                     help="Negative = unemployment falls (SDG 8). "
-                          "−2%/yr ≈ one fifth lower after a decade.")
+    lo, hi = engine.RANGES["growth_target"]
+    g_target = st.number_input(
+        "📈 GDP per-capita growth objective (%/yr)",
+        min_value=lo, max_value=hi, value=3.50, step=0.20, format="%.2f",
+        help=f"Type any value to two decimals, between {lo} and {hi}. "
+             "The +/- buttons move by 0.2.")
+    lo, hi = engine.RANGES["co2_growth"]
+    co2_g = st.number_input(
+        "🌱 CO2 emissions growth (%/yr) — 0 or negative",
+        min_value=lo, max_value=hi, value=-2.00, step=0.20, format="%.2f",
+        help="Negative = emissions decline. The Paris Agreement requires a "
+             "declining path; positive values are not allowed. "
+             "Type any value to two decimals (e.g. −1.35).")
+    lo, hi = engine.RANGES["unemp_growth"]
+    un_g = st.number_input(
+        "🤝 Unemployment rate growth (%/yr) — 0 or negative",
+        min_value=lo, max_value=hi, value=-2.00, step=0.20, format="%.2f",
+        help="Negative = unemployment falls (SDG 8). −2%/yr ≈ one fifth "
+             "lower after a decade. Type any value to two decimals.")
 
     run = st.button("🚀  Run simulation", use_container_width=True)
     st.markdown("---")
@@ -241,29 +263,29 @@ with tab_profile:
         figt.add_scatter(x=ts["eci"]["Year"], y=ts["eci"]["ECI"],
                          mode="lines", name="ECI",
                          line=dict(color=ACCENT, width=3))
-        figt.update_layout(**PLOTLY_LAYOUT, height=200,
+        figt.update_layout(**PLOTLY_LAYOUT, height=215,
                            title=dict(text="Economic Complexity Index", x=0.02),
                            showlegend=False)
-        st.plotly_chart(figt, use_container_width=True)
+        st.plotly_chart(style_axes(figt), use_container_width=True)
 
         figu = go.Figure()
         figu.add_scatter(x=ts["unemp"]["Year"],
                          y=ts["unemp"]["Unemployment_Rate_ILO"],
                          mode="lines", name="Unemployment",
                          line=dict(color="#5B7C99", width=3))
-        figu.update_layout(**PLOTLY_LAYOUT, height=200,
+        figu.update_layout(**PLOTLY_LAYOUT, height=215,
                            title=dict(text="Unemployment rate (%)", x=0.02),
                            showlegend=False)
-        st.plotly_chart(figu, use_container_width=True)
+        st.plotly_chart(style_axes(figu), use_container_width=True)
 
         figc = go.Figure()
         figc.add_scatter(x=ts["co2"]["Year"], y=ts["co2"]["CO2_Emissions_Mt"],
                          mode="lines", name="CO2",
                          line=dict(color="#7A6A53", width=3))
-        figc.update_layout(**PLOTLY_LAYOUT, height=200,
+        figc.update_layout(**PLOTLY_LAYOUT, height=215,
                            title=dict(text="CO2 emissions (Mt)", x=0.02),
                            showlegend=False)
-        st.plotly_chart(figc, use_container_width=True)
+        st.plotly_chart(style_axes(figc), use_container_width=True)
 
     if len(ts["sectors"]):
         st.markdown("##### Employment structure")
@@ -276,7 +298,7 @@ with tab_profile:
         figs.update_layout(**PLOTLY_LAYOUT, height=260,
                            legend=dict(orientation="h", y=1.12, title=None),
                            yaxis_title="% of employment", xaxis_title=None)
-        st.plotly_chart(figs, use_container_width=True)
+        st.plotly_chart(style_axes(figs), use_container_width=True)
 
 # ── Simulation ──────────────────────────────────────────────────────────────
 with tab_sim:
@@ -347,19 +369,22 @@ with tab_sim:
                               values="Added exports (USD M)",
                               color="Effort",
                               color_continuous_scale=["#9BB068", "#E8CFC4", ACCENT])
+            figg.update_traces(textfont=dict(size=15, color="#29261B"),
+                              insidetextfont=dict(size=15))
             figg.update_layout(**PLOTLY_LAYOUT, height=420,
-                               title=dict(text="Where the investment goes", x=0.02))
+                               title=dict(text="Where the investment goes", x=0.02),
+                               coloraxis_colorbar=dict(tickfont=dict(size=13)))
             st.plotly_chart(figg, use_container_width=True)
         with cB:
             pr = res["products"]
             fige = px.scatter(pr, x="Effort", y="Estimated PCI 2032",
                               size="Added exports (USD M)", color="Group",
                               hover_name="Name", size_max=34)
-            fige.update_layout(**PLOTLY_LAYOUT, height=420,
+            fige.update_layout(**PLOTLY_LAYOUT, height=440,
                                title=dict(text="Effort vs complexity of the "
                                                "portfolio", x=0.02),
-                               legend=dict(font=dict(size=10)))
-            st.plotly_chart(fige, use_container_width=True)
+                               legend=dict(font=dict(size=12)))
+            st.plotly_chart(style_axes(fige), use_container_width=True)
 
         xlsx = engine.build_excel(res, models)
         st.download_button(
