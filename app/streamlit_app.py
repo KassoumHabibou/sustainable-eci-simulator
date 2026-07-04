@@ -34,31 +34,81 @@ SERIF = "Georgia, 'Times New Roman', serif"
 
 st.markdown(f"""
 <style>
-  .stApp {{ background-color: {PAPER}; color: {INK}; }}
-  section[data-testid="stSidebar"] {{ background-color: #F0EEE6; }}
-  h1, h2, h3 {{ font-family: {SERIF}; color: {INK}; }}
-  .block-container {{ padding-top: 1.6rem; }}
+  /* ── base: force dark ink on the warm paper, everywhere ─────────────── */
+  .stApp {{ background-color: {PAPER}; }}
+  .stApp, .stApp p, .stApp li, .stApp label, .stApp span,
+  .stMarkdown, .stCaption, div[data-testid="stCaptionContainer"] p {{
+      color: {INK} !important; }}
+  h1, h2, h3, h4 {{ font-family: {SERIF}; color: {INK} !important; }}
+  .block-container {{ padding-top: 1.4rem; max-width: 1250px; }}
+
+  /* sidebar */
+  section[data-testid="stSidebar"] {{
+      background-color: #F0EEE6; border-right: 1px solid #E2DCCC; }}
+  section[data-testid="stSidebar"] * {{ color: {INK}; }}
+  section[data-testid="stSidebar"] .stCaption p {{ color:#6E6A5E !important; }}
+
+  /* metric cards */
   div[data-testid="stMetric"] {{
       background: {CARD}; border: 1px solid #E5E1D8; border-radius: 14px;
       padding: 14px 18px; box-shadow: 0 1px 4px rgba(41,38,27,.06); }}
-  div[data-testid="stMetricLabel"] p {{ font-size: .82rem; color: #6E6A5E; }}
+  div[data-testid="stMetricLabel"] p {{ font-size:.82rem; color:#6E6A5E !important; }}
+  div[data-testid="stMetricValue"] {{ color:{INK} !important;
+      font-family:{SERIF}; }}
+
+  /* ── tabs: full width, big, readable ────────────────────────────────── */
+  div[data-testid="stTabs"] div[role="tablist"] {{
+      display: flex; width: 100%; gap: 10px;
+      border-bottom: none; margin-bottom: 6px; }}
+  div[data-testid="stTabs"] button[role="tab"] {{
+      flex: 1 1 0; justify-content: center;
+      background: {CARD}; border: 1px solid #E5E1D8; border-radius: 12px;
+      padding: 12px 0; font-size: 1.05rem; font-family: {SERIF};
+      color: {INK} !important; box-shadow: 0 1px 3px rgba(41,38,27,.05); }}
+  div[data-testid="stTabs"] button[role="tab"] p {{
+      font-size: 1.05rem !important; color: {INK} !important; }}
+  div[data-testid="stTabs"] button[aria-selected="true"] {{
+      background: {ACCENT} !important; border-color: {ACCENT}; }}
+  div[data-testid="stTabs"] button[aria-selected="true"] p {{
+      color: #FFFFFF !important; font-weight: 700; }}
+  div[data-testid="stTabs"] div[data-baseweb="tab-highlight"],
+  div[data-testid="stTabs"] div[data-baseweb="tab-border"] {{ display:none; }}
+
+  /* hero banner */
   .hero {{
-      background: linear-gradient(135deg, #F5EEE9 0%, {PAPER} 65%);
+      background: linear-gradient(135deg, #F3E8E1 0%, {PAPER} 70%);
       border: 1px solid #E8E2D5; border-radius: 18px;
-      padding: 26px 32px; margin-bottom: 6px; }}
-  .hero h1 {{ margin: 0 0 4px 0; font-size: 2.0rem; }}
-  .hero p  {{ margin: 0; color: #6E6A5E; }}
-  .pill {{ display:inline-block; padding: 3px 12px; border-radius: 999px;
-      background: {ACCENT_SOFT}; color:{INK}; font-size:.8rem; margin-right:6px; }}
-  .warnbox {{ background:#FBEAE8; border-left:4px solid {WARN};
-      border-radius:8px; padding:12px 16px; margin:8px 0; }}
-  .okbox {{ background:#E9F3EE; border-left:4px solid {GOOD};
-      border-radius:8px; padding:12px 16px; margin:8px 0; }}
-  .stButton>button {{ background:{ACCENT}; color:white; border:none;
-      border-radius:10px; padding:.55rem 1.4rem; font-weight:600; }}
-  .stButton>button:hover {{ background:#A94F30; color:white; }}
-  .stDownloadButton>button {{ background:{INK}; color:white; border:none;
-      border-radius:10px; }}
+      padding: 26px 32px; margin-bottom: 14px; }}
+  .hero h1 {{ margin: 0 0 4px 0; font-size: 2.1rem; color:{INK}; }}
+  .hero p  {{ margin: 0; color: #6E6A5E !important; }}
+  .pill {{ display:inline-block; padding: 4px 14px; border-radius: 999px;
+      background: {ACCENT_SOFT}; color:{INK} !important;
+      font-size:.85rem; margin: 4px 6px 0 0; font-weight:600; }}
+
+  /* callouts */
+  .warnbox {{ background:#FBEAE8; border-left:5px solid {WARN};
+      border-radius:10px; padding:14px 18px; margin:10px 0; color:{INK}; }}
+  .okbox {{ background:#E9F3EE; border-left:5px solid {GOOD};
+      border-radius:10px; padding:14px 18px; margin:10px 0; color:{INK}; }}
+  .warnbox b, .okbox b {{ color:{INK}; }}
+
+  /* buttons */
+  .stButton>button {{ background:{ACCENT}; color:#FFFFFF !important;
+      border:none; border-radius:10px; padding:.6rem 1.4rem;
+      font-weight:700; font-size:1rem; }}
+  .stButton>button:hover {{ background:#A94F30; }}
+  .stButton>button * {{ color:#FFFFFF !important; }}
+  .stDownloadButton>button {{ background:{INK}; color:#FFFFFF !important;
+      border:none; border-radius:10px; font-weight:600; }}
+  .stDownloadButton>button * {{ color:#FFFFFF !important; }}
+
+  /* inputs */
+  div[data-baseweb="select"] * {{ color:{INK}; }}
+  div[data-testid="stSlider"] label p {{ font-weight:600; }}
+
+  /* tables */
+  div[data-testid="stDataFrame"] {{ border:1px solid #E5E1D8;
+      border-radius:12px; }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -96,26 +146,29 @@ by_name = {c["name"]: c for c in countries}
 # Sidebar — policy levers
 # ════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("## 🧭 Policy levers")
+    st.markdown("## ⚖️ Policy levers")
     st.markdown("Set your objectives, then run the simulation.")
 
-    sel_name = st.selectbox("Country", list(by_name.keys()),
-                            index=list(by_name.keys()).index("Thailand")
-                            if "Thailand" in by_name else 0)
-    sel = by_name[sel_name]
+    labels = {f"{engine.country_flag(c['code'])}  {c['name']}": c
+              for c in countries}
+    keys = list(labels.keys())
+    default_ix = next((i for i, k in enumerate(keys)
+                       if k.endswith("Thailand")), 0)
+    sel_label = st.selectbox("Country", keys, index=default_ix)
+    sel = labels[sel_label]
 
-    g_target = st.slider("🎯 GDP per-capita growth objective (%/yr)",
+    g_target = st.slider("📈 GDP per-capita growth objective (%/yr)",
                          *engine.RANGES["growth_target"], value=3.5, step=0.1)
-    co2_g = st.slider("🌍 CO2 emissions growth (%/yr) — must be ≤ 0",
+    co2_g = st.slider("🌱 CO2 emissions growth (%/yr) — 0 or negative",
                       *engine.RANGES["co2_growth"], value=-2.0, step=0.5,
                       help="Negative = emissions decline. The Paris Agreement "
                            "requires a declining path; positive values are not allowed.")
-    un_g = st.slider("👷 Unemployment rate growth (%/yr) — must be ≤ 0",
+    un_g = st.slider("🤝 Unemployment rate growth (%/yr) — 0 or negative",
                      *engine.RANGES["unemp_growth"], value=-2.0, step=0.5,
                      help="Negative = unemployment falls (SDG 8). "
                           "−2%/yr ≈ one fifth lower after a decade.")
 
-    run = st.button("▶  Run simulation", use_container_width=True)
+    run = st.button("🚀  Run simulation", use_container_width=True)
     st.markdown("---")
     st.caption("Engine: ECI optimization (Stojkoski & Hidalgo, Research "
                "Policy 2026) with the CERDI–World Bank sustainability "
@@ -149,7 +202,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 tab_profile, tab_sim, tab_method = st.tabs(
-    ["📊  Country profile", "🎯  Simulation results", "📖  Method & sources"])
+    ["🗺️  Country profile", "🎯  Simulation results", "📚  Method & sources"])
 
 # ── Country profile ─────────────────────────────────────────────────────────
 with tab_profile:

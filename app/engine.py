@@ -35,6 +35,54 @@ try:
 except ImportError:                               # pragma: no cover
     pycountry = None
 
+# Built-in ISO3 → country name table (fallback if pycountry is missing,
+# and preferred for short, policymaker-friendly names).
+ISO3_NAMES = {
+    "AFG": "Afghanistan", "AGO": "Angola", "ALB": "Albania",
+    "ARE": "United Arab Emirates", "ARG": "Argentina", "ARM": "Armenia",
+    "AUS": "Australia", "AUT": "Austria", "AZE": "Azerbaijan",
+    "BEL": "Belgium", "BEN": "Benin", "BFA": "Burkina Faso",
+    "BGD": "Bangladesh", "BGR": "Bulgaria",
+    "BIH": "Bosnia and Herzegovina", "BLR": "Belarus", "BOL": "Bolivia",
+    "BRA": "Brazil", "BWA": "Botswana", "CAN": "Canada",
+    "CHE": "Switzerland", "CHL": "Chile", "CHN": "China",
+    "CIV": "Côte d'Ivoire", "CMR": "Cameroon",
+    "COD": "DR Congo", "COG": "Congo", "COL": "Colombia",
+    "CRI": "Costa Rica", "CUB": "Cuba", "CZE": "Czechia",
+    "DEU": "Germany", "DNK": "Denmark", "DOM": "Dominican Republic",
+    "DZA": "Algeria", "ECU": "Ecuador", "EGY": "Egypt", "ESP": "Spain",
+    "ETH": "Ethiopia", "FIN": "Finland", "FRA": "France", "GAB": "Gabon",
+    "GBR": "United Kingdom", "GEO": "Georgia", "GHA": "Ghana",
+    "GIN": "Guinea", "GRC": "Greece", "GTM": "Guatemala",
+    "HKG": "Hong Kong", "HND": "Honduras", "HRV": "Croatia",
+    "HUN": "Hungary", "IDN": "Indonesia", "IND": "India",
+    "IRL": "Ireland", "IRN": "Iran", "IRQ": "Iraq", "ISR": "Israel",
+    "ITA": "Italy", "JAM": "Jamaica", "JOR": "Jordan", "JPN": "Japan",
+    "KAZ": "Kazakhstan", "KEN": "Kenya", "KGZ": "Kyrgyzstan",
+    "KHM": "Cambodia", "KOR": "South Korea", "KWT": "Kuwait",
+    "LAO": "Laos", "LBN": "Lebanon", "LBR": "Liberia", "LBY": "Libya",
+    "LKA": "Sri Lanka", "LTU": "Lithuania", "MAR": "Morocco",
+    "MDA": "Moldova", "MDG": "Madagascar", "MEX": "Mexico",
+    "MKD": "North Macedonia", "MLI": "Mali", "MMR": "Myanmar",
+    "MNG": "Mongolia", "MOZ": "Mozambique", "MRT": "Mauritania",
+    "MWI": "Malawi", "MYS": "Malaysia", "NAM": "Namibia", "NER": "Niger",
+    "NGA": "Nigeria", "NIC": "Nicaragua", "NLD": "Netherlands",
+    "NOR": "Norway", "NZL": "New Zealand", "OMN": "Oman",
+    "PAK": "Pakistan", "PAN": "Panama", "PER": "Peru",
+    "PHL": "Philippines", "PNG": "Papua New Guinea", "POL": "Poland",
+    "PRT": "Portugal", "PRY": "Paraguay", "QAT": "Qatar",
+    "ROU": "Romania", "RUS": "Russia", "SAU": "Saudi Arabia",
+    "SDN": "Sudan", "SEN": "Senegal", "SGP": "Singapore",
+    "SLV": "El Salvador", "SRB": "Serbia", "SVK": "Slovakia",
+    "SVN": "Slovenia", "SWE": "Sweden", "TCD": "Chad", "TGO": "Togo",
+    "THA": "Thailand", "TJK": "Tajikistan", "TKM": "Turkmenistan",
+    "TUN": "Tunisia", "TUR": "Türkiye", "TZA": "Tanzania",
+    "UGA": "Uganda", "UKR": "Ukraine", "URY": "Uruguay",
+    "USA": "United States", "UZB": "Uzbekistan", "VEN": "Venezuela",
+    "VNM": "Vietnam", "YEM": "Yemen", "ZAF": "South Africa",
+    "ZMB": "Zambia", "ZWE": "Zimbabwe",
+}
+
 # Acceptable input ranges (enforced again by the UI sliders)
 RANGES = {
     "growth_target": (0.5, 8.0),     # % annualized GDP-pc growth objective
@@ -84,18 +132,54 @@ def load_indicators():
 
 
 def country_name(iso3):
+    iso3 = iso3.upper()
+    if iso3 in ISO3_NAMES:
+        return ISO3_NAMES[iso3]
     if pycountry:
-        rec = pycountry.countries.get(alpha_3=iso3.upper())
+        rec = pycountry.countries.get(alpha_3=iso3)
         if rec:
             return getattr(rec, "common_name", None) or rec.name
-    return iso3.upper()
+    return iso3
+
+
+ISO3_TO_ISO2 = {
+    "AFG": "AF", "AGO": "AO", "ALB": "AL", "ARE": "AE", "ARG": "AR",
+    "ARM": "AM", "AUS": "AU", "AUT": "AT", "AZE": "AZ", "BEL": "BE",
+    "BEN": "BJ", "BFA": "BF", "BGD": "BD", "BGR": "BG", "BIH": "BA",
+    "BLR": "BY", "BOL": "BO", "BRA": "BR", "BWA": "BW", "CAN": "CA",
+    "CHE": "CH", "CHL": "CL", "CHN": "CN", "CIV": "CI", "CMR": "CM",
+    "COD": "CD", "COG": "CG", "COL": "CO", "CRI": "CR", "CUB": "CU",
+    "CZE": "CZ", "DEU": "DE", "DNK": "DK", "DOM": "DO", "DZA": "DZ",
+    "ECU": "EC", "EGY": "EG", "ESP": "ES", "ETH": "ET", "FIN": "FI",
+    "FRA": "FR", "GAB": "GA", "GBR": "GB", "GEO": "GE", "GHA": "GH",
+    "GIN": "GN", "GRC": "GR", "GTM": "GT", "HKG": "HK", "HND": "HN",
+    "HRV": "HR", "HUN": "HU", "IDN": "ID", "IND": "IN", "IRL": "IE",
+    "IRN": "IR", "IRQ": "IQ", "ISR": "IL", "ITA": "IT", "JAM": "JM",
+    "JOR": "JO", "JPN": "JP", "KAZ": "KZ", "KEN": "KE", "KGZ": "KG",
+    "KHM": "KH", "KOR": "KR", "KWT": "KW", "LAO": "LA", "LBN": "LB",
+    "LBR": "LR", "LBY": "LY", "LKA": "LK", "LTU": "LT", "MAR": "MA",
+    "MDA": "MD", "MDG": "MG", "MEX": "MX", "MKD": "MK", "MLI": "ML",
+    "MMR": "MM", "MNG": "MN", "MOZ": "MZ", "MRT": "MR", "MWI": "MW",
+    "MYS": "MY", "NAM": "NA", "NER": "NE", "NGA": "NG", "NIC": "NI",
+    "NLD": "NL", "NOR": "NO", "NZL": "NZ", "OMN": "OM", "PAK": "PK",
+    "PAN": "PA", "PER": "PE", "PHL": "PH", "PNG": "PG", "POL": "PL",
+    "PRT": "PT", "PRY": "PY", "QAT": "QA", "ROU": "RO", "RUS": "RU",
+    "SAU": "SA", "SDN": "SD", "SEN": "SN", "SGP": "SG", "SLV": "SV",
+    "SRB": "RS", "SVK": "SK", "SVN": "SI", "SWE": "SE", "TCD": "TD",
+    "TGO": "TG", "THA": "TH", "TJK": "TJ", "TKM": "TM", "TUN": "TN",
+    "TUR": "TR", "TZA": "TZ", "UGA": "UG", "UKR": "UA", "URY": "UY",
+    "USA": "US", "UZB": "UZ", "VEN": "VE", "VNM": "VN", "YEM": "YE",
+    "ZAF": "ZA", "ZMB": "ZM", "ZWE": "ZW",
+}
 
 
 def country_flag(iso3):
-    if pycountry:
+    iso2 = ISO3_TO_ISO2.get(iso3.upper())
+    if not iso2 and pycountry:
         rec = pycountry.countries.get(alpha_3=iso3.upper())
-        if rec:
-            return "".join(chr(0x1F1E6 + ord(ch) - 65) for ch in rec.alpha_2)
+        iso2 = rec.alpha_2 if rec else None
+    if iso2:
+        return "".join(chr(0x1F1E6 + ord(ch) - 65) for ch in iso2)
     return ""
 
 
