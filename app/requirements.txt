@@ -7,3 +7,4 @@ statsmodels>=0.14
 PuLP>=2.7
 openpyxl>=3.1
 pycountry>=23.12
+matplotlib>=3.7
