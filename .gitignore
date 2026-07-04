@@ -1,0 +1,10 @@
+# large raw data (> GitHub limits) — regenerate/copy locally, see README
+data/bilateral_2022.csv
+
+# caches & local artifacts
+results/cache/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.streamlit/secrets.toml

@@ -1,0 +1,258 @@
+Product,Name,Type_HS2,Group_Section,in_baseline,in_extended,status,RCA_2022,PCI_2032,Effort,RelativeRelatedness,Added_vol_baseline,Added_vol_extended
+2927,"Diazo, Azo or Aoxy Compounds",Organic chemicals,Chemical Products,True,True,both,0.99,0.941,0.021,2.052,3531754.3531512893,10223728.365486847
+8501,Electric Motors,Electrical machinery and electronics,Machines,True,True,both,0.987,0.947,0.085,0.805,431164335.02056336,1158955658.0207896
+8532,Electrical Capacitors,Electrical machinery and electronics,Machines,True,True,both,0.859,1.033,0.128,3.492,222982126.44262335,557763550.0261563
+8703,Cars,"Cars, tractors, trucks & parts thereof.",Transportation,True,True,both,0.964,0.942,0.135,0.402,5742570020.363668,14656407187.3143
+6905,Roofing Tiles,Ceramic products,Stone And Glass,True,True,both,0.947,0.744,0.165,0.25,6588162.038357066,16350626.821311867
+2922,Oxygen Amino Compounds,Organic chemicals,Chemical Products,True,True,both,0.959,0.713,0.169,-0.156,151129792.84682798,375191368.02848226
+7320,Iron Springs,Iron/Steel Articles,Metals,True,True,both,0.935,1.111,0.171,0.465,62008754.45803895,152849112.6257892
+7319,Iron Sewing Needles,Iron/Steel Articles,Metals,True,True,both,0.852,1.009,0.214,1.889,2771292.7781634615,6491315.244234415
+8505,Electromagnets,Electrical machinery and electronics,Machines,True,True,both,0.871,0.963,0.216,1.291,94074440.33071128,221146271.53001022
+8525,Broadcasting Equipment,Electrical machinery and electronics,Machines,True,True,both,0.883,0.745,0.225,0.811,4190229474.7281275,9826809127.415705
+7315,Iron Chains,Iron/Steel Articles,Metals,True,True,both,0.94,1.56,0.229,-0.829,51874462.83251571,123030209.53223917
+5906,Rubber Textile Fabric,"Coated, covered, & laminated fabrics for industrial use",Textiles,True,True,both,0.908,0.907,0.23,0.023,14643067.527492603,34443319.16100428
+7105,Precious Stone Dust,"Precious stones, metals, & pearls",Precious Metals,True,True,both,0.9,1.494,0.246,-0.09,4190501.344239336,9742498.289223881
+8305,Metal Office Supplies,Miscellaneous metal products,Metals,True,True,both,0.892,0.776,0.247,0.117,9179685.723632332,21296341.605341867
+8518,Microphones and Headphones,Electrical machinery and electronics,Machines,True,True,both,0.842,0.807,0.253,1.374,446923859.5441213,1020216608.7198453
+8472,Other Office Machines,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.862,1.094,0.268,0.504,47021664.936102666,107000936.56144434
+8517,Telephones,Electrical machinery and electronics,Machines,True,True,both,0.781,0.812,0.277,2.593,1193697715.029328,2647048737.993092
+7412,Copper Pipe Fittings,Copper articles,Metals,True,True,both,0.905,1.178,0.286,-1.0,56670010.14915241,129075130.37529373
+8523,Blank Audio Media,Electrical machinery and electronics,Machines,True,True,both,0.772,1.692,0.292,2.534,449077859.26847893,985499725.6064368
+8535,High-voltage Protection Equipment,Electrical machinery and electronics,Machines,True,True,both,0.835,0.77,0.295,0.716,87857271.24979831,195763398.6664214
+8546,Electrical Insulators,Electrical machinery and electronics,Machines,True,True,both,0.833,0.996,0.295,0.757,24476476.976345148,54512076.56930522
+7613,Aluminium Gas Containers,Aluminum articles,Metals,True,True,both,0.884,1.058,0.329,-1.281,6867180.879905912,15239908.635484137
+4006,Unvulcanised Rubber Products,Rubber & articles thereof,Plastics and Rubbers,True,True,both,0.847,1.111,0.342,-0.539,5256549.78522,11496762.566620229
+7009,Glass Mirrors,Glass & glassware,Stone And Glass,True,True,both,0.847,0.883,0.342,-0.536,80735915.35275486,176484586.12107566
+7229,Steel Wire,Iron & steel,Metals,True,True,both,0.819,0.833,0.346,0.138,30684981.85082745,66501877.075123794
+8207,Interchangeable Tool Parts,Tools & cutlery,Metals,True,True,both,0.828,1.757,0.347,-0.134,244749634.48262298,531541811.7523268
+8413,Liquid Pumps,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.815,1.543,0.373,-0.294,777910347.7329041,1665966194.2772927
+8451,Textile Processing Machines,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.814,1.169,0.378,-0.34,107475777.35629003,229698766.94861677
+8404,Boiler Plants,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.788,1.037,0.391,0.101,18387032.79936615,38846089.109939836
+3906,Acrylic Polymers,Plastics & articles thereof,Plastics and Rubbers,True,True,both,0.771,1.209,0.399,0.409,208998390.0122104,438243611.8180859
+3810,Metal Pickling Preparations,Chemical products n.e.s.,Chemical Products,True,True,both,0.752,1.565,0.42,0.515,20495212.779855497,42463337.44328069
+6805,Abrasive Powder,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,True,True,both,0.737,1.241,0.443,0.473,59563185.262558065,121984003.35301109
+3926,Other Plastic Products,Plastics & articles thereof,Plastics and Rubbers,True,True,both,0.748,1.025,0.453,0.005,1341641517.5616558,2746902174.7480593
+8480,Metal Molds,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.715,1.476,0.488,0.206,238617464.39052057,479591013.12291986
+3818,Disc Chemicals for Electronics,Chemical products n.e.s.,Chemical Products,True,True,both,0.675,1.771,0.503,1.019,168303727.93987173,333371466.1931016
+8455,Metal-Rolling Mills,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.696,1.292,0.543,-0.317,69030845.65435593,136054166.0155962
+8428,Lifting Machinery,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.675,1.296,0.56,-0.071,449218677.4425397,877278641.4748026
+8481,Valves,"Machinery, mechanical appliances, & parts",Machines,True,True,both,0.614,1.466,0.646,-0.023,1466227628.3576279,2771645427.657378
+9030,Oscilloscopes,"Optical, photo, & film equipment; medical instruments",Instruments,True,True,both,0.441,1.717,0.837,1.178,471468155.99166673,833427856.5113673
+8515,Electric Soldering Equipment,Electrical machinery and electronics,Machines,True,True,both,0.399,2.012,0.989,-0.413,246967024.2398643,426763030.0699474
+9105,Other Clocks,"Clocks, watches, & parts",Instruments,False,True,extended only,0.828,0.634,0.316,0.498,0.0,30826141.558385745
+8506,Batteries,Electrical machinery and electronics,Machines,False,True,extended only,0.773,0.684,0.324,1.863,0.0,198238924.67927375
+7907,Other Zinc Products,Zinc articles,Metals,False,True,extended only,0.832,0.639,0.352,-0.344,0.0,34023849.22147544
+7616,Other Aluminium Products,Aluminum articles,Metals,False,True,extended only,0.792,0.598,0.359,0.636,0.0,466738723.67734265
+8311,Coated Metal Soldering Products,Miscellaneous metal products,Metals,False,True,extended only,0.757,0.624,0.373,1.295,0.0,76505071.70835097
+3819,Hydraulic Brake Fluid,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.803,0.861,0.439,-1.241,0.0,23863005.65721278
+2813,Nonmetal Sulfides,Inorganic chemicals,Chemical Products,False,True,extended only,0.785,0.807,0.441,-0.782,0.0,6393527.5790699525
+4008,Rubber Sheets,Rubber & articles thereof,Plastics and Rubbers,False,True,extended only,0.743,0.883,0.455,0.09,0.0,116814716.86971906
+8433,Harvesting Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.745,1.012,0.465,-0.155,0.0,639353516.7612174
+8302,Metal Mountings,Miscellaneous metal products,Metals,False,True,extended only,0.726,0.68,0.515,-0.612,0.0,1033023964.8052776
+2926,Nitrile Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.714,0.95,0.531,-0.59,0.0,158182540.21079075
+8421,Centrifuges,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.695,1.002,0.534,-0.116,0.0,2188108957.788719
+8454,Casting Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.713,0.745,0.535,-0.63,0.0,73356565.57142773
+5911,Textiles for technical uses,"Coated, covered, & laminated fabrics for industrial use",Textiles,False,True,extended only,0.678,1.142,0.548,0.07,0.0,149150726.0585504
+3005,Bandages,Pharmaceutical products,Chemical Products,False,True,extended only,0.648,1.121,0.603,-0.146,0.0,254349716.89003274
+6506,Other Headwear,Headgear,Footwear and Headwear,False,True,extended only,0.637,0.97,0.61,0.011,0.0,130956002.97710614
+8303,Safes,Miscellaneous metal products,Metals,False,True,extended only,0.585,0.788,0.682,0.093,0.0,39214436.98801735
+9007,Video Cameras,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.583,0.773,0.684,0.105,0.0,20031635.175578274
+8417,Industrial Furnaces,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.594,1.022,0.694,-0.384,0.0,141289752.48325622
+2903,Halogenated Hydrocarbons,Organic chemicals,Chemical Products,False,True,extended only,0.56,0.907,0.7,0.409,0.0,359166623.40513766
+9616,Scent Sprays,Misc. manufactures,Miscellaneous,False,True,extended only,0.617,0.664,0.714,-1.397,0.0,55121252.95721052
+8538,Electrical Power Accessories,Electrical machinery and electronics,Machines,False,True,extended only,0.531,0.987,0.718,0.893,0.0,1115158631.581522
+4806,Vegetable Parchment,Paper articles,Paper Goods,False,True,extended only,0.636,1.401,0.73,-2.161,0.0,66150454.62207913
+3812,Prepared Rubber Accelerators,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.516,0.98,0.761,0.508,0.0,150953664.97621864
+2842,Other Inorganic Acids Salts,Inorganic chemicals,Chemical Products,False,True,extended only,0.491,1.4,0.764,1.146,0.0,46583802.64939391
+8468,Soldering and Welding Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.512,0.784,0.77,0.428,0.0,30837028.47100094
+8467,Motor-working Tools,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.509,1.209,0.797,0.038,0.0,271112120.73237914
+3919,Self-adhesive Plastics,Plastics & articles thereof,Plastics and Rubbers,False,True,extended only,0.495,1.346,0.798,0.415,0.0,720237278.8994932
+3504,Peptones,"Glues, starches, & albuminoid products",Chemical Products,False,True,extended only,0.575,0.723,0.8,-1.811,0.0,128812006.12068473
+9026,Gas and Liquid Flow Measuring Instruments,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.531,1.243,0.803,-0.679,0.0,760462855.0315965
+8503,Electric Motor Parts,Electrical machinery and electronics,Machines,False,True,extended only,0.484,0.785,0.81,0.464,0.0,674823184.5972986
+8211,Knives,Tools & cutlery,Metals,False,True,extended only,0.512,0.809,0.818,-0.445,0.0,105453578.17031649
+9611,Rubber Stamps,Misc. manufactures,Miscellaneous,False,True,extended only,0.49,0.936,0.838,-0.198,0.0,9516576.541861081
+8483,Transmissions,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.477,1.383,0.852,-0.089,0.0,1997898273.817025
+8701,Tractors,"Cars, tractors, trucks & parts thereof.",Transportation,False,True,extended only,0.48,1.079,0.863,-0.39,0.0,1906021263.3387284
+3506,Glues,"Glues, starches, & albuminoid products",Chemical Products,False,True,extended only,0.429,0.857,0.875,0.814,0.0,409971196.4971935
+9018,Medical Instruments,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.465,0.893,0.879,-0.271,0.0,4824028353.323701
+7003,Cast or Rolled Glass,Glass & glassware,Stone And Glass,False,True,extended only,0.395,0.844,0.88,1.684,0.0,92465610.6164685
+8526,Navigation Equipment,Electrical machinery and electronics,Machines,False,True,extended only,0.433,1.14,0.884,0.53,0.0,671791222.1285185
+7007,Safety Glass,Glass & glassware,Stone And Glass,False,True,extended only,0.415,0.78,0.9,0.752,0.0,375025160.22722346
+9031,Other Measuring Instruments,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.396,1.565,0.903,1.222,0.0,1590814039.7943003
+7002,Glass Balls,Glass & glassware,Stone And Glass,False,True,extended only,0.425,0.843,0.905,0.387,0.0,48704187.70224306
+8539,Electric Filament,Electrical machinery and electronics,Machines,False,True,extended only,0.404,0.872,0.917,0.733,0.0,258074765.82359266
+8422,Washing and Bottling Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.452,0.997,0.926,-0.761,0.0,1142800079.6604688
+8101,Tungsten,Cermet articles,Metals,False,True,extended only,0.438,1.588,0.928,-0.394,0.0,39962861.23549661
+7219,Large Flat-Rolled Stainless Steel,Iron & steel,Metals,False,True,extended only,0.438,0.792,0.93,-0.421,0.0,1108012848.518614
+8466,Metalworking Machine Parts,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.426,1.658,0.935,-0.184,0.0,599618702.9514909
+8707,Vehicle Bodies (including cabs) for the motor vehicles (8701 to 8705),"Cars, tractors, trucks & parts thereof.",Transportation,False,True,extended only,0.42,0.91,0.939,-0.115,0.0,297475179.487772
+8432,Soil Preparation Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.428,0.801,0.946,-0.432,0.0,342770096.6220453
+8419,Other Heating Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.403,1.38,0.95,0.165,0.0,1515125220.7400768
+8514,Electric Furnaces,Electrical machinery and electronics,Machines,False,True,extended only,0.419,1.292,0.952,-0.313,0.0,188781055.29748863
+8477,Rubberworking Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.421,1.67,0.954,-0.381,0.0,938020593.041027
+7415,Copper Fasteners,Copper articles,Metals,False,True,extended only,0.438,1.241,0.957,-0.904,0.0,42850004.27334837
+3207,Prepared Pigments,"Paints, dyes, & varnishes",Chemical Products,False,True,extended only,0.392,0.799,0.968,0.146,0.0,158230940.433024
+8412,Other Engines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.378,0.837,0.978,0.361,0.0,857921291.2549822
+8208,Cutting Blades,Tools & cutlery,Metals,False,True,extended only,0.426,1.614,0.981,-1.028,0.0,115757698.31258704
+7109,Gold Clad Metals,"Precious stones, metals, & pearls",Precious Metals,False,True,extended only,0.329,0.926,0.983,1.667,0.0,3622232.5196261057
+6903,Refractory Ceramics,Ceramic products,Stone And Glass,False,True,extended only,0.385,0.915,0.984,0.061,0.0,78740172.41277806
+7018,Glass Beads,Glass & glassware,Stone And Glass,False,True,extended only,0.394,0.933,0.988,-0.259,0.0,49892149.20316159
+8426,Cranes,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.386,1.038,1.007,-0.379,0.0,502212801.6520599
+8431,Excavation Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.354,1.214,1.01,0.468,0.0,2097099990.371525
+8507,Electric Batteries,Electrical machinery and electronics,Machines,False,True,extended only,0.315,1.022,1.019,1.395,0.0,3130907479.3342357
+3909,Amino-resins,Plastics & articles thereof,Plastics and Rubbers,False,True,extended only,0.336,0.971,1.025,0.693,0.0,680950261.6904764
+3807,"Wood Tar, Oils and Pitch",Chemical products n.e.s.,Chemical Products,False,True,extended only,0.446,1.056,1.033,-2.469,0.0,5043962.435743141
+8471,Computers,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.316,1.081,1.033,1.132,0.0,11381804467.807137
+3816,Refractory Cements,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.376,0.725,1.034,-0.564,0.0,91668136.2998382
+7220,Flat-Rolled Stainless Steel,Iron & steel,Metals,False,True,extended only,0.342,1.397,1.04,0.252,0.0,192721691.06171444
+3704,Undeveloped Exposed Photographic Material,Photo & movie goods,Chemical Products,False,True,extended only,0.311,1.218,1.043,1.081,0.0,1201522.2771505076
+5903,Plastic Coated Textile Fabric,"Coated, covered, & laminated fabrics for industrial use",Textiles,False,True,extended only,0.312,1.525,1.054,0.859,0.0,431165233.9560987
+3601,Propellant Powders,"Explosives, matches, & fireworks",Chemical Products,False,True,extended only,0.397,1.097,1.068,-1.744,0.0,16122649.76448007
+3403,Lubricating Products,"Soap, cleaners, candles, dental, modelling pastes",Chemical Products,False,True,extended only,0.362,1.661,1.089,-1.158,0.0,375151772.3297588
+8510,Hair Trimmers,Electrical machinery and electronics,Machines,False,True,extended only,0.313,0.738,1.089,0.207,0.0,190583721.08539006
+8447,Knitting Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.323,0.731,1.094,-0.157,0.0,88578296.94333209
+7611,Large Aluminium Containers,Aluminum articles,Metals,False,True,extended only,0.326,1.017,1.096,-0.27,0.0,9413715.06496557
+3212,Nonaqueous Pigments,"Paints, dyes, & varnishes",Chemical Products,False,True,extended only,0.304,0.981,1.098,0.305,0.0,81189675.80828515
+9209,Musical Instrument Parts,Musical instruments,Instruments,False,True,extended only,0.281,1.162,1.099,0.944,0.0,58636080.37633459
+8425,Pulley Systems,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.36,0.966,1.1,-1.3,0.0,282487562.87203985
+8476,Vending Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.307,0.772,1.105,0.077,0.0,60418640.319116294
+5907,Coated Textile Fabric,"Coated, covered, & laminated fabrics for industrial use",Textiles,False,True,extended only,0.344,0.724,1.113,-1.07,0.0,34254975.89087549
+8209,Tool Plates,Tools & cutlery,Metals,False,True,extended only,0.321,1.992,1.117,-0.499,0.0,221287707.18285254
+8304,Filing Cabinets,Miscellaneous metal products,Metals,False,True,extended only,0.364,0.714,1.123,-1.799,0.0,11941743.76383312
+2851,Inorganic Compounds,Inorganic chemicals,Chemical Products,False,True,extended only,0.253,1.505,1.134,1.126,0.0,47170166.60443269
+3913,Natural Polymers,Plastics & articles thereof,Plastics and Rubbers,False,True,extended only,0.331,0.795,1.146,-1.299,0.0,120566056.23713274
+3813,Fire Extinguishers Preparations,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.332,0.883,1.148,-1.365,0.0,11043502.99287667
+9301,Military Weapons,Weapons,Weapons,False,True,extended only,0.27,0.999,1.15,0.35,0.0,55468548.108862996
+8424,Liquid Dispersing Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.306,1.238,1.152,-0.709,0.0,900766443.7011068
+8485,Boat Propellers,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.288,1.393,1.163,-0.406,0.0,395800384.6768308
+8461,Metalworking Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.302,1.827,1.169,-0.892,0.0,84452483.52006517
+8803,"Aircraft parts (gliders, balloons, and powered aircraft)",Aircraft and Spacecraft,Transportation,False,True,extended only,0.285,0.887,1.173,-0.479,0.0,2799046882.483986
+3702,Photographic Film,Photo & movie goods,Chemical Products,False,True,extended only,0.196,1.724,1.179,1.96,0.0,55403951.43216003
+8464,Stone Working Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.266,1.388,1.179,-0.033,0.0,105281413.31299402
+8205,Other Hand Tools,Tools & cutlery,Metals,False,True,extended only,0.308,1.649,1.183,-1.278,0.0,297524098.55903405
+8530,Traffic Signals,Electrical machinery and electronics,Machines,False,True,extended only,0.267,0.923,1.186,-0.205,0.0,100223772.56862502
+7004,Blown Glass,Glass & glassware,Stone And Glass,False,True,extended only,0.228,1.026,1.202,0.621,0.0,25592955.597453225
+8459,Drilling Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.258,1.097,1.203,-0.222,0.0,111157065.14994352
+3215,Ink,"Paints, dyes, & varnishes",Chemical Products,False,True,extended only,0.223,0.88,1.204,0.745,0.0,478866412.8513792
+8462,Forging Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.265,1.441,1.205,-0.47,0.0,363031061.45281196
+8442,Print Production Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.235,0.834,1.212,0.264,0.0,50706591.908583894
+8716,"Trailers and semi-trailers, not mechanically propelled vehicles","Cars, tractors, trucks & parts thereof.",Transportation,False,True,extended only,0.241,0.901,1.218,-0.006,0.0,1235249779.5705817
+9612,Ink Ribbons,Misc. manufactures,Miscellaneous,False,True,extended only,0.19,1.237,1.222,1.392,0.0,63655198.9646681
+8508,Vacuum Cleaners,Electrical machinery and electronics,Machines,False,True,extended only,0.206,1.181,1.233,0.717,0.0,884635613.1496308
+9011,Microscopes,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.2,1.155,1.241,0.763,0.0,116211733.6833461
+9101,Precious Metal Watches,"Clocks, watches, & parts",Instruments,False,True,extended only,0.214,0.964,1.247,0.242,0.0,534934112.8548878
+9103,Clocks with Watch Movements,"Clocks, watches, & parts",Instruments,False,True,extended only,0.229,0.763,1.247,-0.177,0.0,3491039.061138124
+8509,Other Domestic Electric Housewares,Electrical machinery and electronics,Machines,False,True,extended only,0.193,0.988,1.252,0.788,0.0,1239920054.7942348
+5910,Conveyor Belt Textiles,"Coated, covered, & laminated fabrics for industrial use",Textiles,False,True,extended only,0.224,1.205,1.265,-0.345,0.0,26153009.99095473
+9402,Medical Furniture,"Furniture, bedding, lamps, & prefab buildings",Miscellaneous,False,True,extended only,0.227,0.942,1.274,-0.566,0.0,193350735.06761342
+8411,Gas Turbines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.236,1.049,1.279,-0.923,0.0,5895624460.574667
+8420,Rolling Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.236,1.863,1.28,-0.932,0.0,56270934.844881415
+3006,Special Pharmaceuticals,Pharmaceutical products,Chemical Products,False,True,extended only,0.198,0.875,1.296,-0.127,0.0,634336597.674017
+3905,Other Vinyl Polymers,Plastics & articles thereof,Plastics and Rubbers,False,True,extended only,0.168,0.938,1.3,0.668,0.0,227327231.8054435
+8479,Machinery Having Individual Functions,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.181,1.871,1.311,0.095,0.0,5772867578.798859
+8423,Scales,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.191,0.993,1.318,-0.292,0.0,197115728.15501466
+7006,Glass with Edge Workings,Glass & glassware,Stone And Glass,False,True,extended only,0.084,0.875,1.324,2.742,0.0,114760430.52369456
+8463,Other Non-Metal Removal Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.19,1.037,1.329,-0.448,0.0,76189662.22164962
+2929,Other Nitrogen Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.152,1.319,1.331,0.592,0.0,253046079.30526295
+8445,Textile Fiber Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.188,1.061,1.34,-0.596,0.0,149052716.745789
+4801,Newsprint,Paper articles,Paper Goods,False,True,extended only,0.244,1.264,1.345,-2.233,0.0,324977618.74702716
+2920,Other Esters,Organic chemicals,Chemical Products,False,True,extended only,0.157,1.658,1.346,0.188,0.0,75891032.51848008
+3507,Enzymes,"Glues, starches, & albuminoid products",Chemical Products,False,True,extended only,0.211,1.239,1.347,-1.35,0.0,286642165.8852815
+6906,Ceramic Pipes,Ceramic products,Stone And Glass,False,True,extended only,0.185,0.908,1.355,-0.766,0.0,5003490.899375979
+8416,Liquid Fuel Furnaces,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.211,1.341,1.36,-1.58,0.0,103207119.64486313
+9027,Chemical Analysis Instruments,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.175,1.871,1.362,-0.598,0.0,2197633356.679941
+2936,Vitamins,Organic chemicals,Chemical Products,False,True,extended only,0.188,1.286,1.366,-1.026,0.0,411369983.36085474
+6806,Rock Wool,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,False,True,extended only,0.167,0.806,1.366,-0.431,0.0,214883731.04085252
+8446,Looms,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.166,0.819,1.37,-0.477,0.0,85196673.46199118
+7302,Iron Railway Products,Iron/Steel Articles,Metals,False,True,extended only,0.187,0.942,1.376,-1.16,0.0,151817621.24411395
+2932,Oxygen Heterocyclic Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.156,1.11,1.381,-0.374,0.0,407831495.53791064
+8441,Other Paper Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.153,1.149,1.381,-0.29,0.0,328051439.04711074
+9024,Tensile Testing Machines,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.203,1.576,1.381,-1.705,0.0,102017747.04065384
+8457,Metalworking Transfer Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.126,1.922,1.399,0.177,0.0,352520886.5108631
+8436,Other Agricultural Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.146,0.994,1.404,-0.475,0.0,363858629.00389844
+3707,Photographic Chemicals,Photo & movie goods,Chemical Products,False,True,extended only,0.115,1.879,1.405,0.413,0.0,234063851.77307674
+7508,Other Nickel Products,Nickel articles,Metals,False,True,extended only,0.175,1.165,1.405,-1.316,0.0,93777187.06102432
+3001,Glands and Other Organs,Pharmaceutical products,Chemical Products,False,True,extended only,0.168,0.895,1.412,-1.236,0.0,241519342.50412235
+5502,Artificial Filament Tow,Man-made staple fibres,Textiles,False,True,extended only,0.072,1.329,1.413,1.555,0.0,83108576.42410816
+8448,Knitting Machine Accessories,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.125,1.377,1.419,-0.09,0.0,208615185.18969062
+8113,Cermets,Cermet articles,Metals,False,True,extended only,0.113,1.624,1.426,0.13,0.0,46928972.36731753
+8104,Magnesium,Cermet articles,Metals,False,True,extended only,0.117,1.02,1.435,-0.157,0.0,108345668.94321916
+4905,Maps,"Books, newspapers, & other prints",Paper Goods,False,True,extended only,0.126,0.854,1.438,-0.47,0.0,6983833.5185901355
+2925,Carboxyimide Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.145,1.462,1.439,-1.01,0.0,86608990.71980602
+8438,Industrial Food Preperation Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.143,0.873,1.442,-0.999,0.0,634295559.2767518
+8427,Fork-Lifts,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.128,1.653,1.446,-0.647,0.0,926872603.6691638
+9014,Compasses,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.137,1.54,1.446,-0.891,0.0,331850691.58167493
+2921,Amine Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.11,1.122,1.447,-0.14,0.0,473183731.0095753
+8519,Sound Recording Equipment,Electrical machinery and electronics,Machines,False,True,extended only,0.092,0.811,1.447,0.39,0.0,87173208.68718924
+9021,Orthopedic Appliances,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.095,1.4,1.455,0.179,0.0,2901862149.3131194
+9010,Photo Lab Equipment,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.083,2.072,1.465,0.365,0.0,1329122295.3482783
+4901,Brochures,"Books, newspapers, & other prints",Paper Goods,False,True,extended only,0.097,0.808,1.479,-0.294,0.0,687142757.4662501
+6603,Umbrella and Walking Stick Accessories,"Umbrellas, walking sticks, & whips",Footwear and Headwear,False,True,extended only,0.104,0.85,1.48,-0.513,0.0,19595783.843452487
+6815,Other Stone Articles,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,False,True,extended only,0.068,0.957,1.484,0.476,0.0,372417968.60571754
+5905,Textile Wall Coverings,"Coated, covered, & laminated fabrics for industrial use",Textiles,False,True,extended only,0.115,1.152,1.488,-0.954,0.0,5367730.9095217185
+5909,Hose Piping Textiles,"Coated, covered, & laminated fabrics for industrial use",Textiles,False,True,extended only,0.11,0.883,1.488,-0.83,0.0,17032030.072573043
+2941,Antibiotics,Organic chemicals,Chemical Products,False,True,extended only,0.08,0.946,1.491,-0.014,0.0,507580402.0859121
+7222,Other Stainless Steel Bars,Iron & steel,Metals,False,True,extended only,0.118,1.394,1.495,-1.171,0.0,297127068.49796396
+8475,Glass Working Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.074,1.224,1.505,-0.041,0.0,214246367.7109784
+3004,Packaged Medicaments,Pharmaceutical products,Chemical Products,False,True,extended only,0.074,0.948,1.508,-0.107,0.0,19088263793.84243
+7226,Flat-Rolled Iron,Iron & steel,Metals,False,True,extended only,0.091,1.586,1.508,-0.598,0.0,178118252.49771732
+2915,Saturated Acyclic Monocarboxylic Acids,Organic chemicals,Chemical Products,False,True,extended only,0.061,0.945,1.517,0.11,0.0,725988501.6507379
+2823,Titanium Oxides,Inorganic chemicals,Chemical Products,False,True,extended only,0.035,0.843,1.522,0.808,0.0,39211864.50694039
+2930,Organo-Sulfur Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.052,1.391,1.525,0.264,0.0,378296859.5104472
+8204,Wrenches,Tools & cutlery,Metals,False,True,extended only,0.106,1.378,1.528,-1.356,0.0,120064219.33721188
+8434,Dairy Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.084,0.838,1.529,-0.736,0.0,100096801.84894586
+2924,Carboxyamide Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.074,1.376,1.54,-0.638,0.0,413552947.3588799
+3822,Laboratory Reagents,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.088,1.682,1.542,-1.077,0.0,1348781571.6939328
+9508,Fairground Amusements,"Toys, games, & sports",Miscellaneous,False,True,extended only,0.051,1.104,1.542,0.008,0.0,66548768.344497874
+4810,Kaolin Coated Paper,Paper articles,Paper Goods,False,True,extended only,0.071,0.916,1.552,-0.724,0.0,1282049679.3776157
+9016,Balances,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.053,1.596,1.556,-0.274,0.0,18118898.51371783
+2850,Hydrides and other anions,Inorganic chemicals,Chemical Products,False,True,extended only,0.037,1.53,1.557,0.187,0.0,29750911.157497015
+8444,Artificial Textile Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.066,1.954,1.557,-0.683,0.0,51568150.95678618
+9022,X-Ray Equipment,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.073,1.649,1.557,-0.876,0.0,1155441222.1795368
+9704,Revenue Stamps,Art & antiques,Arts and Antiques,False,True,extended only,0.08,0.837,1.559,-1.097,0.0,5473288.447595562
+7225,Flat Flat-Rolled Steel,Iron & steel,Metals,False,True,extended only,0.058,1.419,1.561,-0.487,0.0,1538854460.3042684
+1105,Potato Flours,Products of the milling industry,Vegetable Products,False,True,extended only,0.088,1.06,1.564,-1.411,0.0,44692465.079545654
+7107,Silver Clad Metals,"Precious stones, metals, & pearls",Precious Metals,False,True,extended only,0.046,1.036,1.568,-0.262,0.0,6543765.305996041
+8439,Papermaking Machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.083,1.491,1.581,-1.543,0.0,257609924.57074842
+3801,Artificial Graphite,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.024,0.895,1.583,0.133,0.0,146116559.89916027
+8465,Woodworking machines,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.065,1.144,1.587,-1.134,0.0,389249854.8669867
+2933,Nitrogen Heterocyclic Compounds,Organic chemicals,Chemical Products,False,True,extended only,0.069,1.565,1.592,-1.31,0.0,4240694750.3107224
+3701,Photographic Plates,Photo & movie goods,Chemical Products,False,True,extended only,0.058,1.58,1.603,-1.192,0.0,198643126.9898212
+2934,Nucleic Acids,Organic chemicals,Chemical Products,False,True,extended only,0.04,1.388,1.612,-0.795,0.0,1207322755.6963255
+2812,Halides,Inorganic chemicals,Chemical Products,False,True,extended only,0.016,1.347,1.614,-0.12,0.0,29458174.21640127
+9205,Wind Instruments,Musical instruments,Instruments,False,True,extended only,0.034,1.23,1.614,-0.642,0.0,35139690.87640335
+7221,Hot-Rolled Stainless Steel Bars,Iron & steel,Metals,False,True,extended only,0.039,1.446,1.615,-0.809,0.0,87076823.37903783
+7507,Nickel Pipes,Nickel articles,Metals,False,True,extended only,0.041,1.28,1.617,-0.923,0.0,54108850.54145657
+2816,Magnesium Hydroxide and Peroxide,Inorganic chemicals,Chemical Products,False,True,extended only,0.016,0.871,1.618,-0.172,0.0,12336228.920683302
+3705,Developed Exposed Photographic Material,Photo & movie goods,Chemical Products,False,True,extended only,0.008,2.344,1.619,0.026,0.0,61471153.3809203
+8603,Self-Propelled Rail Transport,Railway and trams,Transportation,False,True,extended only,0.006,1.6,1.62,0.07,0.0,278609155.260228
+2843,Precious Metal Compounds,Inorganic chemicals,Chemical Products,False,True,extended only,0.029,1.476,1.622,-0.644,0.0,515912661.0778798
+2928,Hydrazine or Hydroxylamine Derivatives,Organic chemicals,Chemical Products,False,True,extended only,0.042,1.36,1.625,-1.063,0.0,75126030.09702182
+2919,Phosphoric Esters and Salts,Organic chemicals,Chemical Products,False,True,extended only,0.006,1.74,1.633,-0.132,0.0,56167061.570569746
+3914,Polymer Ion-Exchangers,Plastics & articles thereof,Plastics and Rubbers,False,True,extended only,0.029,1.758,1.633,-0.807,0.0,99043101.18226042
+4701,Mechanical Wood Pulp,Wood pulp & paper scrap,Paper Goods,False,True,extended only,0.095,0.858,1.635,-2.726,0.0,18269646.968316123
+2912,"Aldehydes, cyclic polymers, and paraformaldehyde",Organic chemicals,Chemical Products,False,True,extended only,0.024,1.35,1.641,-0.784,0.0,130253089.24643312
+6814,Processed Mica,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,False,True,extended only,0.021,0.918,1.643,-0.74,0.0,15260557.93814497
+2908,Phenol Derivatives,Organic chemicals,Chemical Products,False,True,extended only,0.018,1.091,1.645,-0.672,0.0,38501698.08742701
+8607,Locomotive Parts,Railway and trams,Transportation,False,True,extended only,0.009,0.931,1.648,-0.453,0.0,611319496.8593643
+3703,Photographic Paper,Photo & movie goods,Chemical Products,False,True,extended only,0.066,0.954,1.652,-2.19,0.0,23783950.497891024
+3821,Micro-Organism Culture Preparations,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.029,1.385,1.664,-1.297,0.0,165488726.83196834
+9012,Non-optical Microscopes,"Optical, photo, & film equipment; medical instruments",Instruments,False,True,extended only,0.027,2.035,1.667,-1.299,0.0,149929698.04987773
+4902,Newspapers,"Books, newspapers, & other prints",Paper Goods,False,True,extended only,0.019,1.198,1.671,-1.114,0.0,136151681.6994825
+8449,Felt Machinery,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.015,0.992,1.672,-1.01,0.0,70926950.72544284
+2911,Acetals and Hemiacetals,Organic chemicals,Chemical Products,False,True,extended only,0.006,1.327,1.679,-0.851,0.0,4379891.010226179
+3804,Wood Pulp Lyes,Chemical products n.e.s.,Chemical Products,False,True,extended only,0.045,0.919,1.68,-2.015,0.0,24655306.881033543
+9304,"Spring, Air, and Gas Guns",Weapons,Weapons,False,True,extended only,0.011,0.844,1.682,-1.058,0.0,43803849.330523364
+3002,"Vaccines, blood, antisera, toxins and cultures",Pharmaceutical products,Chemical Products,False,True,extended only,0.014,1.529,1.693,-1.327,0.0,13544487043.504852
+8601,Electric Locomotives,Railway and trams,Transportation,False,True,extended only,0.0,1.029,1.695,-0.95,0.0,60960952.751242384
+1501,Pig and Poultry Fat,"Animal or vegetable fats, oils, & waxes",Animal and Vegetable Bi-Products,False,True,extended only,0.002,0.876,1.706,-1.194,0.0,44491745.64213004
+7506,Nickel Sheets,Nickel articles,Metals,False,True,extended only,0.023,1.7,1.714,-1.896,0.0,79311150.34359364
+2935,Sulfonamides,Organic chemicals,Chemical Products,False,True,extended only,0.0,1.37,1.719,-1.337,0.0,515812023.6272169
+7505,Nickel Bars,Nickel articles,Metals,False,True,extended only,0.021,1.356,1.722,-1.984,0.0,159400434.0730582
+7218,Stainless Steel Ingots,Iron & steel,Metals,False,True,extended only,0.02,1.069,1.737,-2.186,0.0,206912514.39633998
+2937,Hormones,Organic chemicals,Chemical Products,False,True,extended only,0.001,1.19,1.75,-1.836,0.0,1016109429.6869847
+8401,Nuclear Reactors,"Machinery, mechanical appliances, & parts",Machines,False,True,extended only,0.003,1.008,1.75,-1.897,0.0,169779050.30960208
+4904,Sheet Music,"Books, newspapers, & other prints",Paper Goods,False,True,extended only,0.004,1.638,1.759,-2.059,0.0,4471283.719140278
+4704,Sulfite Chemical Woodpulp,Wood pulp & paper scrap,Paper Goods,False,True,extended only,0.004,1.227,1.763,-2.115,0.0,26702582.396984864
+9702,Prints,Art & antiques,Arts and Antiques,False,True,extended only,0.008,0.943,1.766,-2.271,0.0,26301569.89673841

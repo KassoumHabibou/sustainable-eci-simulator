@@ -1,0 +1,105 @@
+Product,Name,Type_HS2,Group_Section,first_target_ECI,growth_at_target,RCA_2022,RelativeRelatedness,PCI_2032,Effort,Added_volume_USD
+8485,Boat Propellers,"Machinery, mechanical appliances, & parts",Machines,0.971,2.772,0.98,1.228,1.393,0.113,156954929.60254636
+8547,Metal Insulating Fittings,Electrical machinery and electronics,Machines,0.971,2.772,0.912,1.143,1.182,0.21,120871448.49275893
+3926,Other Plastic Products,Plastics & articles thereof,Plastics and Rubbers,0.971,2.772,0.876,1.588,1.025,0.236,1984094289.692614
+8507,Electric Batteries,Electrical machinery and electronics,Machines,0.971,2.772,0.891,0.595,1.022,0.266,1742059049.3819194
+8484,Gaskets,"Machinery, mechanical appliances, & parts",Machines,0.971,2.772,0.905,-0.005,1.376,0.278,83854673.99121863
+4911,Other Printed Material,"Books, newspapers, & other prints",Paper Goods,1.021,2.82,0.936,1.04,0.764,0.182,177431724.22729373
+7009,Glass Mirrors,Glass & glassware,Stone And Glass,1.021,2.82,0.939,0.538,0.883,0.204,132244083.3560555
+6815,Other Stone Articles,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,1.021,2.82,0.905,1.199,0.957,0.216,151499708.6328063
+9001,Optical Fibers and optical fibre bundles,"Optical, photo, & film equipment; medical instruments",Instruments,1.021,2.82,0.905,0.657,1.02,0.244,571238160.1159039
+9612,Ink Ribbons,Misc. manufactures,Miscellaneous,1.021,2.82,0.898,-0.82,1.237,0.331,35450938.07819031
+3810,Metal Pickling Preparations,Chemical products n.e.s.,Chemical Products,1.021,2.82,0.801,0.133,1.565,0.415,40540633.445315726
+6810,Cement Articles,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,1.071,2.869,0.973,1.236,0.48,0.123,0.0
+8302,Metal Mountings,Miscellaneous metal products,Metals,1.071,2.869,0.947,1.107,0.68,0.164,640098508.0459646
+203,Pig Meat,Meat & edible offal,Animal Products,1.071,2.869,0.941,-0.207,0.787,0.239,681659457.9272074
+3005,Bandages,Pharmaceutical products,Chemical Products,1.071,2.869,0.868,0.335,1.121,0.312,187255664.30324504
+8523,Blank Audio Media,Electrical machinery and electronics,Machines,1.071,2.869,0.777,-0.798,1.692,0.498,1192399615.3239887
+8515,Electric Soldering Equipment,Electrical machinery and electronics,Machines,1.071,2.869,0.703,-0.257,2.012,0.574,337351670.6410396
+8707,Vehicle Bodies (including cabs) for the motor vehicles (8701 to 8705),"Cars, tractors, trucks & parts thereof.",Transportation,1.121,2.917,0.86,1.159,0.91,0.28,170977299.33117312
+3801,Artificial Graphite,Chemical products n.e.s.,Chemical Products,1.121,2.917,0.928,-1.156,0.895,0.308,66542320.17575585
+8607,Locomotive Parts,Railway and trams,Transportation,1.121,2.917,0.807,1.205,0.931,0.35,274985575.2623667
+4006,Unvulcanised Rubber Products,Rubber & articles thereof,Plastics and Rubbers,1.121,2.917,0.795,0.118,1.111,0.424,11490220.968562854
+8483,Transmissions,"Machinery, mechanical appliances, & parts",Machines,1.121,2.917,0.753,0.815,1.383,0.446,1480051699.0060925
+9027,Chemical Analysis Instruments,"Optical, photo, & film equipment; medical instruments",Instruments,1.121,2.917,0.635,-0.031,1.871,0.66,1563305260.2408774
+5602,Felt,"Wadding, felt, nonwovens, twin, ropes, & articles thereof",Textiles,1.171,2.965,0.895,0.396,0.738,0.271,25846938.942591537
+7609,Aluminium Pipe Fittings,Aluminum articles,Metals,1.171,2.965,0.876,0.316,0.8,0.301,20576750.75161979
+3203,Vegetable or Animal Dyes,"Paints, dyes, & varnishes",Chemical Products,1.171,2.965,0.887,-0.29,0.656,0.318,0.0
+8423,Scales,"Machinery, mechanical appliances, & parts",Machines,1.171,2.965,0.891,-1.411,0.993,0.372,108976622.56541409
+2915,Saturated Acyclic Monocarboxylic Acids,Organic chemicals,Chemical Products,1.171,2.965,0.859,-1.176,0.945,0.404,381311847.513492
+8603,Self-Propelled Rail Transport,Railway and trams,Transportation,1.171,2.965,0.617,-0.735,1.6,0.726,189979525.15903196
+8479,Machinery Having Individual Functions,"Machinery, mechanical appliances, & parts",Machines,1.171,2.965,0.521,-0.562,1.871,0.859,5003879519.998168
+8411,Gas Turbines,"Machinery, mechanical appliances, & parts",Machines,1.221,3.014,0.764,-0.354,1.049,0.493,3708140130.2363048
+8205,Other Hand Tools,Tools & cutlery,Metals,1.221,3.014,0.57,-0.775,1.649,0.797,257530430.37224618
+9022,X-Ray Equipment,"Optical, photo, & film equipment; medical instruments",Instruments,1.221,3.014,0.543,-0.907,1.649,0.845,882202682.5876216
+9017,Drafting Tools,"Optical, photo, & film equipment; medical instruments",Instruments,1.221,3.014,0.406,-0.478,1.903,1.03,97200564.11548108
+8209,Tool Plates,Tools & cutlery,Metals,1.221,3.014,0.376,-0.992,1.992,1.107,249088074.0343486
+8433,Harvesting Machinery,"Machinery, mechanical appliances, & parts",Machines,1.271,3.062,0.691,1.063,1.012,0.521,647457700.0695082
+8467,Motor-working Tools,"Machinery, mechanical appliances, & parts",Machines,1.271,3.062,0.682,-0.323,1.209,0.608,247261700.63400412
+8416,Liquid Fuel Furnaces,"Machinery, mechanical appliances, & parts",Machines,1.271,3.062,0.554,0.244,1.341,0.764,79187801.07864739
+2912,"Aldehydes, cyclic polymers, and paraformaldehyde",Organic chemicals,Chemical Products,1.271,3.062,0.586,-0.901,1.35,0.781,91446260.80495675
+9031,Other Measuring Instruments,"Optical, photo, & film equipment; medical instruments",Instruments,1.271,3.062,0.531,-0.382,1.565,0.833,1682216280.2946165
+9030,Oscilloscopes,"Optical, photo, & film equipment; medical instruments",Instruments,1.271,3.062,0.407,-0.226,1.717,1.014,1041153087.6722498
+7211,Large Flat-Rolled Iron,Iron & steel,Metals,1.321,3.11,0.768,1.179,0.77,0.406,114816751.74936534
+2916,Unsaturated Acyclic Monocarboxylic Acids,Organic chemicals,Chemical Products,1.321,3.11,0.624,-0.992,1.2,0.73,365708398.698128
+8428,Lifting Machinery,"Machinery, mechanical appliances, & parts",Machines,1.321,3.11,0.539,1.024,1.296,0.743,1025395059.4375153
+8480,Metal Molds,"Machinery, mechanical appliances, & parts",Machines,1.321,3.11,0.486,-0.121,1.476,0.887,668164806.3816204
+8427,Fork-Lifts,"Machinery, mechanical appliances, & parts",Machines,1.321,3.11,0.409,-0.525,1.653,1.028,846179132.1510231
+8207,Interchangeable Tool Parts,Tools & cutlery,Metals,1.321,3.11,0.322,-0.21,1.757,1.148,970721449.0662272
+7412,Copper Pipe Fittings,Copper articles,Metals,1.371,3.159,0.573,-0.268,1.178,0.764,184424091.89666548
+7307,Iron Pipe Fittings,Iron/Steel Articles,Metals,1.371,3.159,0.502,0.762,1.241,0.812,657343719.7450786
+4806,Vegetable Parchment,Paper articles,Paper Goods,1.371,3.159,0.51,-0.367,1.401,0.864,75065178.43093537
+9013,LCDs,"Optical, photo, & film equipment; medical instruments",Instruments,1.371,3.159,0.54,-1.235,1.384,0.869,1493567788.497494
+5903,Plastic Coated Textile Fabric,"Coated, covered, & laminated fabrics for industrial use",Textiles,1.371,3.159,0.423,-0.29,1.525,0.993,470234949.66997933
+8208,Cutting Blades,Tools & cutlery,Metals,1.371,3.159,0.35,0.397,1.614,1.067,133701893.96861671
+8461,Metalworking Machines,"Machinery, mechanical appliances, & parts",Machines,1.371,3.159,0.263,-0.927,1.827,1.286,102745532.24206881
+7415,Copper Fasteners,Copper articles,Metals,1.421,3.207,0.539,-1.577,1.241,0.89,45052077.878023714
+7315,Iron Chains,Iron/Steel Articles,Metals,1.421,3.207,0.31,-0.0,1.56,1.154,242667401.52261192
+2920,Other Esters,Organic chemicals,Chemical Products,1.421,3.207,0.365,-1.829,1.658,1.176,81055096.00131825
+8101,Tungsten,Cermet articles,Metals,1.421,3.207,0.311,-0.526,1.588,1.183,51887083.5192887
+3705,Developed Exposed Photographic Material,Photo & movie goods,Chemical Products,1.421,3.207,0.015,-1.204,2.344,1.739,78167900.07403971
+6804,Milling Stones,"Stone, plaster, cement, asbestos, mica.",Stone And Glass,1.471,3.255,0.43,0.567,1.306,0.932,192562671.18097505
+8443,Industrial Printers,"Machinery, mechanical appliances, & parts",Machines,1.471,3.255,0.341,-0.57,1.508,1.138,2234521345.739104
+7318,Iron Fasteners,Iron/Steel Articles,Metals,1.471,3.255,0.239,-0.033,1.642,1.271,1848780198.701853
+8466,Metalworking Machine Parts,"Machinery, mechanical appliances, & parts",Machines,1.471,3.255,0.196,0.816,1.658,1.293,824136931.0861903
+8202,Hand Saws,Tools & cutlery,Metals,1.471,3.255,0.218,-0.939,1.745,1.363,244275769.94105613
+9010,Photo Lab Equipment,"Optical, photo, & film equipment; medical instruments",Instruments,1.471,3.255,0.083,-1.474,2.072,1.632,1724640322.7044313
+3919,Self-adhesive Plastics,Plastics & articles thereof,Plastics and Rubbers,1.521,3.304,0.392,-0.201,1.346,1.036,923283884.9193231
+7416,Copper Springs,Copper articles,Metals,1.521,3.304,0.398,-0.459,1.37,1.041,37792611.45568593
+8456,Non-Mechanical Removal Machinery,"Machinery, mechanical appliances, & parts",Machines,1.521,3.304,0.204,-0.889,1.726,1.382,323484852.9144749
+3707,Photographic Chemicals,Photo & movie goods,Chemical Products,1.521,3.304,0.106,-0.605,1.879,1.534,295948593.20849836
+8420,Rolling Machines,"Machinery, mechanical appliances, & parts",Machines,1.521,3.304,0.115,-1.186,1.863,1.555,75210283.80387115
+9012,Non-optical Microscopes,"Optical, photo, & film equipment; medical instruments",Instruments,1.521,3.304,0.006,-0.703,2.035,1.723,182929830.97456375
+9033,Opto-Electric Instrument Parts,"Optical, photo, & film equipment; medical instruments",Instruments,1.571,3.352,0.507,1.186,1.08,0.782,97025034.69229698
+8204,Wrenches,Tools & cutlery,Metals,1.571,3.352,0.336,-0.482,1.378,1.141,113009263.50855105
+2851,Inorganic Compounds,Inorganic chemicals,Chemical Products,1.571,3.352,0.246,-1.343,1.505,1.339,61847159.59845598
+8113,Cermets,Cermet articles,Metals,1.571,3.352,0.209,-1.136,1.624,1.389,54433319.44655897
+3702,Photographic Film,Photo & movie goods,Chemical Products,1.571,3.352,0.17,-1.43,1.724,1.475,77224700.83463301
+8457,Metalworking Transfer Machines,"Machinery, mechanical appliances, & parts",Machines,1.571,3.352,0.027,-1.246,1.922,1.72,489549321.79973716
+8444,Artificial Textile Machinery,"Machinery, mechanical appliances, & parts",Machines,1.571,3.352,0.006,-1.677,1.954,1.789,68548220.58011076
+4812,Paper Pulp Filter Blocks,Paper articles,Paper Goods,1.621,3.4,0.65,0.305,0.903,0.621,0.0
+7223,Stainless Steel Wire,Iron & steel,Metals,1.621,3.4,0.216,-0.529,1.462,1.34,120577107.39659558
+7226,Flat-Rolled Iron,Iron & steel,Metals,1.621,3.4,0.107,0.424,1.586,1.468,204711174.64616963
+8477,Rubberworking Machinery,"Machinery, mechanical appliances, & parts",Machines,1.621,3.4,0.092,-0.367,1.67,1.544,1468899376.1909733
+3910,Silicone,Plastics & articles thereof,Plastics and Rubbers,1.621,3.4,0.053,-1.236,1.771,1.67,483221143.3050428
+3914,Polymer Ion-Exchangers,Plastics & articles thereof,Plastics and Rubbers,1.621,3.4,0.026,-1.261,1.758,1.723,123378150.76846914
+9108,Watch Movements,"Clocks, watches, & parts",Instruments,1.621,3.4,0.016,-1.722,1.756,1.773,59935814.66646724
+8521,Video Recording Equipment,Electrical machinery and electronics,Machines,1.671,3.449,0.579,0.068,0.977,0.737,1374032041.7011487
+8473,Office Machine Parts,"Machinery, mechanical appliances, & parts",Machines,1.671,3.449,0.602,-0.598,0.972,0.741,8314103537.949214
+2914,Ketones and Quinones,Organic chemicals,Chemical Products,1.671,3.449,0.372,-0.685,1.286,1.095,286372765.35757667
+8514,Electric Furnaces,Electrical machinery and electronics,Machines,1.671,3.449,0.325,-0.18,1.292,1.14,235262882.96219373
+9024,Tensile Testing Machines,"Optical, photo, & film equipment; medical instruments",Instruments,1.671,3.449,0.088,-0.819,1.576,1.58,130576079.34857577
+3403,Lubricating Products,"Soap, cleaners, candles, dental, modelling pastes",Chemical Products,1.671,3.449,0.081,-1.357,1.661,1.628,568540977.84927
+3822,Laboratory Reagents,Chemical products n.e.s.,Chemical Products,1.671,3.449,0.031,-0.971,1.682,1.694,1715036967.2951126
+2919,Phosphoric Esters and Salts,Organic chemicals,Chemical Products,1.671,3.449,0.023,-1.373,1.74,1.735,70833363.93549322
+3818,Disc Chemicals for Electronics,Chemical products n.e.s.,Chemical Products,1.671,3.449,0.001,-1.58,1.771,1.79,790272792.0308684
+2928,Hydrazine or Hydroxylamine Derivatives,Organic chemicals,Chemical Products,1.721,3.497,0.266,-2.064,1.36,1.352,77871366.7031443
+8462,Forging Machines,"Machinery, mechanical appliances, & parts",Machines,1.721,3.497,0.14,-0.44,1.441,1.464,480138951.46699935
+8439,Papermaking Machines,"Machinery, mechanical appliances, & parts",Machines,1.721,3.497,0.068,-0.425,1.491,1.59,0.0
+3701,Photographic Plates,Photo & movie goods,Chemical Products,1.721,3.497,0.082,-1.481,1.58,1.633,239343715.74777222
+2910,Epoxides,Organic chemicals,Chemical Products,1.721,3.497,0.048,-1.326,1.607,1.686,229878401.57274806
+9016,Balances,"Optical, photo, & film equipment; medical instruments",Instruments,1.721,3.497,0.011,-1.078,1.596,1.739,23581004.3638586
+4904,Sheet Music,"Books, newspapers, & other prints",Paper Goods,1.721,3.497,0.003,-0.984,1.638,1.747,5287848.618991265
+7506,Nickel Sheets,Nickel articles,Metals,1.721,3.497,0.009,-1.377,1.7,1.763,96486427.49788101
+2934,Nucleic Acids,Organic chemicals,Chemical Products,1.724,3.5,0.215,-1.839,1.388,1.423,1309887702.8323696
+8458,Metal Lathes,"Machinery, mechanical appliances, & parts",Machines,1.724,3.5,0.04,-0.636,1.543,1.655,348224785.9777783

@@ -1,0 +1,27 @@
+Step 1 — Forward model: loading cache
+tha CO2red=-2 Ured=+0  ECI*=+1.19  n= 49  inv=$20B  g=3.50%
+tha CO2red=-2 Ured=+2  ECI*=+0.95  n=  3  inv=$1B  g=3.50%
+tha CO2red=-2 Ured=+4  ECI*=+0.74  n=  0  inv=$0B  g=3.50%
+tha CO2red=+0 Ured=+0  ECI*=+1.84 (capped)  n=257  inv=$185B  g=3.44%
+tha CO2red=+0 Ured=+2  ECI*=+1.52  n=114  inv=$53B  g=3.50%
+tha CO2red=+0 Ured=+4  ECI*=+1.24  n= 60  inv=$25B  g=3.50%
+tha CO2red=+2 Ured=+0  ECI*=+2.66 (capped)  n=257  inv=$185B  g=2.64%
+tha CO2red=+2 Ured=+2  ECI*=+2.22 (capped)  n=257  inv=$185B  g=3.03%
+tha CO2red=+2 Ured=+4  ECI*=+1.86 (capped)  n=257  inv=$185B  g=3.41%
+tha CO2red=+4 Ured=+0  ECI*=+3.73 (capped)  n=257  inv=$185B  g=1.84%
+tha CO2red=+4 Ured=+2  ECI*=+3.12 (capped)  n=257  inv=$185B  g=2.23%
+tha CO2red=+4 Ured=+4  ECI*=+2.63 (capped)  n=257  inv=$185B  g=2.61%
+mex CO2red=-2 Ured=+0  ECI*=+1.55  n= 72  inv=$40B  g=3.50%
+mex CO2red=-2 Ured=+2  ECI*=+1.27  n= 40  inv=$24B  g=3.50%
+mex CO2red=-2 Ured=+4  ECI*=+1.03  n= 12  inv=$5B  g=3.50%
+mex CO2red=+0 Ured=+0  ECI*=+2.27 (capped)  n=221  inv=$243B  g=3.24%
+mex CO2red=+0 Ured=+2  ECI*=+1.90  n=142  inv=$157B  g=3.50%
+mex CO2red=+0 Ured=+4  ECI*=+1.58  n= 77  inv=$43B  g=3.50%
+mex CO2red=+2 Ured=+0  ECI*=+3.19 (capped)  n=221  inv=$243B  g=2.41%
+mex CO2red=+2 Ured=+2  ECI*=+2.68 (capped)  n=221  inv=$243B  g=2.82%
+mex CO2red=+2 Ured=+4  ECI*=+2.26 (capped)  n=221  inv=$243B  g=3.23%
+mex CO2red=+4 Ured=+0  ECI*=+4.40 (capped)  n=221  inv=$243B  g=1.58%
+mex CO2red=+4 Ured=+2  ECI*=+3.69 (capped)  n=221  inv=$243B  g=1.99%
+mex CO2red=+4 Ured=+4  ECI*=+3.12 (capped)  n=221  inv=$243B  g=2.40%
+
+Saved results/robustness.csv and figures/robustness.png

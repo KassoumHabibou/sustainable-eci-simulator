@@ -1,0 +1,36 @@
+Step 1 — Forward model: loading cache
+
+Step 2 — Growth regression (Eq. 3), baseline vs extended
+  baseline: n=212, R2=0.217   extended: n=211, R2=0.367
+
+==================================================================
+Thailand (THA)
+==================================================================
+  Predicted 2032 ECI (no optimization): +0.933   [paper: +0.933]
+  Expected growth at that ECI:          3.27 %  [paper: 3.23 %]
+  ECI target, baseline Eq. 3:  +1.153  [paper: +1.225]
+  ECI target, extended Eq. 3:  +2.223  (CO2 reduction +2.0%/yr; unemployment reduction +2.0%/yr: 0.73% -> 0.60% in 10y)
+  !! target unattainable (max feasible ECI = +1.806); capped at +1.786 -> attainable growth under the scenario: 3.03 % (vs 3.5 % asked)
+  [paper_target] target ECI +1.225 -> 55 products, added volume USD 24,107 M
+  [baseline] target ECI +1.153 -> 40 products, added volume USD 19,305 M
+  [extended] target ECI +1.786 -> 257 products, added volume USD 184,752 M
+
+==================================================================
+Mexico (MEX)
+==================================================================
+  Predicted 2032 ECI (no optimization): +0.921   [paper: +0.926]
+  Expected growth at that ECI:          2.72 %  [paper: 3.15 %]
+  ECI target, baseline Eq. 3:  +1.724  [paper: +1.287]
+  ECI target, extended Eq. 3:  +2.682  (CO2 reduction +2.0%/yr; unemployment reduction +2.0%/yr: 2.77% -> 2.26% in 10y)
+  !! target unattainable (max feasible ECI = +2.045); capped at +2.025 -> attainable growth under the scenario: 2.82 % (vs 3.5 % asked)
+  [paper_target] target ECI +1.287 -> 42 products, added volume USD 24,447 M
+  [baseline] target ECI +1.724 -> 100 products, added volume USD 62,748 M
+  [extended] target ECI +2.025 -> 221 products, added volume USD 242,780 M
+
+==================================================================
+Validation of the baseline against paper Figure 5:
+country  paper_n  ours_n  matched  match_pct                                                         matched_codes missed_codes
+    tha       15      55       14  93.333333 2927 3819 4006 7320 8101 8428 8455 8477 8481 8501 8523 8525 8532 9031         4008
+    mex       15      42       13  86.666667      3801 6810 6815 7609 8423 8428 8433 8483 8484 8485 8547 8707 9030    7211 8480
+
+All outputs saved in results/ — done.
