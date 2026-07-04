@@ -310,7 +310,16 @@ with tab_sim:
                     g_target, co2_g, un_g)
                 st.session_state["result"] = res
                 st.session_state["result_country"] = sel["name"]
+                n_prod = res["summary"]["Number of recommended products"]
+                st.toast(f"✅ Simulation complete — {n_prod} products "
+                         f"recommended for {sel['name']}.", icon="🎉")
+                st.success(f"**Simulation complete.** The optimal "
+                           f"diversification portfolio for **{sel['name']}** "
+                           f"is ready below — {n_prod} products identified. "
+                           f"You can review the results and export them to "
+                           f"Excel at the bottom of the page.")
             except Exception as exc:      # pragma: no cover
+                st.toast("❌ Simulation failed.", icon="⚠️")
                 st.error(f"Simulation failed: {exc}")
 
     res = st.session_state.get("result")
