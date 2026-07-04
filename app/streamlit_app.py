@@ -56,23 +56,23 @@ st.markdown(f"""
   div[data-testid="stMetricValue"] {{ color:{INK} !important;
       font-family:{SERIF}; }}
 
-  /* ── tabs: full width, big, readable ────────────────────────────────── */
-  div[data-testid="stTabs"] div[role="tablist"] {{
-      display: flex; width: 100%; gap: 10px;
-      border-bottom: none; margin-bottom: 6px; }}
-  div[data-testid="stTabs"] button[role="tab"] {{
-      flex: 1 1 0; justify-content: center;
+  /* ── main navigation (radio styled as full-width tab cards) ─────────── */
+  .st-key-main-nav div[role="radiogroup"] {{
+      display: flex; flex-direction: row; width: 100%; gap: 10px; }}
+  .st-key-main-nav div[role="radiogroup"] > label {{
+      flex: 1 1 0; justify-content: center; text-align: center;
       background: {CARD}; border: 1px solid #E5E1D8; border-radius: 12px;
-      padding: 12px 0; font-size: 1.05rem; font-family: {SERIF};
-      color: {INK} !important; box-shadow: 0 1px 3px rgba(41,38,27,.05); }}
-  div[data-testid="stTabs"] button[role="tab"] p {{
-      font-size: 1.05rem !important; color: {INK} !important; }}
-  div[data-testid="stTabs"] button[aria-selected="true"] {{
-      background: {ACCENT} !important; border-color: {ACCENT}; }}
-  div[data-testid="stTabs"] button[aria-selected="true"] p {{
+      padding: 12px 0; margin: 0; cursor: pointer;
+      box-shadow: 0 1px 3px rgba(41,38,27,.05); }}
+  .st-key-main-nav div[role="radiogroup"] > label p {{
+      font-size: 1.05rem !important; font-family: {SERIF};
+      color: {INK} !important; }}
+  .st-key-main-nav div[role="radiogroup"] > label > div:first-child {{
+      display: none; }}   /* hide the radio circle */
+  .st-key-main-nav div[role="radiogroup"] > label:has(input:checked) {{
+      background: {ACCENT}; border-color: {ACCENT}; }}
+  .st-key-main-nav div[role="radiogroup"] > label:has(input:checked) p {{
       color: #FFFFFF !important; font-weight: 700; }}
-  div[data-testid="stTabs"] div[data-baseweb="tab-highlight"],
-  div[data-testid="stTabs"] div[data-baseweb="tab-border"] {{ display:none; }}
 
   /* hero banner */
   .hero {{
@@ -104,7 +104,6 @@ st.markdown(f"""
 
   /* inputs */
   div[data-baseweb="select"] * {{ color:{INK}; }}
-  div[data-testid="stSlider"] label p {{ font-weight:600; }}
 
   /* tables */
   div[data-testid="stDataFrame"] {{ border:1px solid #E5E1D8;
@@ -152,11 +151,15 @@ def _indicators():
 
 state, models, indicators = _state(), _models(), _indicators()
 countries = engine.available_countries(state, models)
-by_name = {c["name"]: c for c in countries}
+
+NAV_PROFILE = "🗺️  Country profile"
+NAV_RESULTS = "🎯  Simulation results"
+NAV_METHOD = "📚  Method & sources"
 
 
 # ════════════════════════════════════════════════════════════════════════════
-# Sidebar — policy levers
+# Sidebar — policy levers (runs BEFORE the navigation widget, so a finished
+# simulation can jump the user straight to the results section)
 # ════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
     st.markdown("## ⚖️ Policy levers")
@@ -191,6 +194,25 @@ with st.sidebar:
              "lower after a decade. Type any value to two decimals.")
 
     run = st.button("🚀  Run simulation", use_container_width=True)
+    if run:
+        with st.spinner("Optimizing the export portfolio …"):
+            try:
+                res = engine.run_policy_simulation(
+                    state, models, indicators, sel["code"],
+                    g_target, co2_g, un_g)
+                st.session_state["result"] = res
+                st.session_state["result_country"] = sel["name"]
+                st.session_state["sim_error"] = None
+                st.session_state["just_finished"] = True
+                n_prod = res["summary"]["Number of recommended products"]
+                st.toast(f"✅ Simulation complete — {n_prod} products "
+                         f"recommended for {sel['name']}.", icon="🎉")
+            except Exception as exc:      # pragma: no cover
+                st.session_state["sim_error"] = str(exc)
+                st.toast("❌ Simulation failed.", icon="⚠️")
+        # jump straight to the results section (nav widget not built yet)
+        st.session_state["nav"] = NAV_RESULTS
+
     st.markdown("---")
     st.caption("Engine: ECI optimization (Stojkoski & Hidalgo, Research "
                "Policy 2026) with the CERDI–World Bank sustainability "
@@ -198,7 +220,7 @@ with st.sidebar:
 
 
 # ════════════════════════════════════════════════════════════════════════════
-# Header + country dashboard
+# Header + navigation
 # ════════════════════════════════════════════════════════════════════════════
 flag = engine.country_flag(sel["code"])
 ind = engine.latest_indicators(indicators, sel["iso3"])
@@ -223,14 +245,16 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-tab_profile, tab_sim, tab_method = st.tabs(
-    ["🗺️  Country profile", "🎯  Simulation results", "📚  Method & sources"])
+with st.container(key="main-nav"):
+    nav = st.radio("Navigation", [NAV_PROFILE, NAV_RESULTS, NAV_METHOD],
+                   key="nav", horizontal=True, label_visibility="collapsed")
 
-# ── Country profile ─────────────────────────────────────────────────────────
-with tab_profile:
+# ════════════════════════════════════════════════════════════════════════════
+# Section 1 — Country profile
+# ════════════════════════════════════════════════════════════════════════════
+if nav == NAV_PROFILE:
     c1, c2 = st.columns([1.05, 1])
     with c1:
-        # dynamic map, zoomed on the country
         map_df = pd.DataFrame({"iso3": [sel["iso3"]], "v": [1.0],
                                "name": [sel["name"]]})
         figm = px.choropleth(map_df, locations="iso3", color="v",
@@ -287,6 +311,7 @@ with tab_profile:
                            showlegend=False)
         st.plotly_chart(style_axes(figc), use_container_width=True)
 
+    ts = engine.timeseries(indicators, sel["iso3"])
     if len(ts["sectors"]):
         st.markdown("##### Employment structure")
         sec = ts["sectors"].rename(columns={
@@ -300,34 +325,26 @@ with tab_profile:
                            yaxis_title="% of employment", xaxis_title=None)
         st.plotly_chart(style_axes(figs), use_container_width=True)
 
-# ── Simulation ──────────────────────────────────────────────────────────────
-with tab_sim:
-    if run:
-        with st.spinner("Optimizing the export portfolio …"):
-            try:
-                res = engine.run_policy_simulation(
-                    state, models, indicators, sel["code"],
-                    g_target, co2_g, un_g)
-                st.session_state["result"] = res
-                st.session_state["result_country"] = sel["name"]
-                n_prod = res["summary"]["Number of recommended products"]
-                st.toast(f"✅ Simulation complete — {n_prod} products "
-                         f"recommended for {sel['name']}.", icon="🎉")
-                st.success(f"**Simulation complete.** The optimal "
-                           f"diversification portfolio for **{sel['name']}** "
-                           f"is ready below — {n_prod} products identified. "
-                           f"You can review the results and export them to "
-                           f"Excel at the bottom of the page.")
-            except Exception as exc:      # pragma: no cover
-                st.toast("❌ Simulation failed.", icon="⚠️")
-                st.error(f"Simulation failed: {exc}")
-
+# ════════════════════════════════════════════════════════════════════════════
+# Section 2 — Simulation results
+# ════════════════════════════════════════════════════════════════════════════
+elif nav == NAV_RESULTS:
+    err = st.session_state.get("sim_error")
     res = st.session_state.get("result")
-    if res is None:
+    if err:
+        st.error(f"Simulation failed: {err}")
+    if res is None and not err:
         st.info("Choose a country and your objectives in the sidebar, then "
                 "press **Run simulation**.")
-    else:
+    elif res is not None:
         s = res["summary"]
+        if st.session_state.pop("just_finished", False):
+            n_prod = s["Number of recommended products"]
+            st.success(f"**Simulation complete.** The optimal diversification "
+                       f"portfolio for **{st.session_state['result_country']}**"
+                       f" is ready below — {n_prod} products identified. "
+                       f"You can export everything to Excel at the bottom "
+                       f"of the page.")
         st.markdown(f"### Results — {st.session_state['result_country']}")
 
         if res["capped"]:
@@ -372,14 +389,12 @@ with tab_sim:
 
         cA, cB = st.columns([1, 1])
         with cA:
-            top = res["products"].groupby("Group")["Added exports (USD M)"] \
-                .sum().sort_values(ascending=False).reset_index()
             figg = px.treemap(res["products"], path=["Group", "Name"],
                               values="Added exports (USD M)",
                               color="Effort",
                               color_continuous_scale=["#9BB068", "#E8CFC4", ACCENT])
             figg.update_traces(textfont=dict(size=15, color="#29261B"),
-                              insidetextfont=dict(size=15))
+                               insidetextfont=dict(size=15))
             figg.update_layout(**PLOTLY_LAYOUT, height=420,
                                title=dict(text="Where the investment goes", x=0.02),
                                coloraxis_colorbar=dict(tickfont=dict(size=13)))
@@ -403,8 +418,10 @@ with tab_sim:
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             use_container_width=True)
 
-# ── Method & sources ────────────────────────────────────────────────────────
-with tab_method:
+# ════════════════════════════════════════════════════════════════════════════
+# Section 3 — Method & sources
+# ════════════════════════════════════════════════════════════════════════════
+else:
     st.markdown("""
 ### How the simulator works
 
