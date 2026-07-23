@@ -217,9 +217,9 @@ state, models, indicators = _state(), _models(), _indicators()
 trade = _trade()
 countries = engine.available_countries(state, models)
 
-NAV_PROFILE = "🗺️  Country profile"
-NAV_RESULTS = "🎯  Simulation results"
-NAV_METHOD = "📚  Method & sources"
+NAV_PROFILE = "🌍  Country profile"
+NAV_RESULTS = "📊  Simulation results"
+NAV_METHOD = "📖  Method & sources"
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -227,7 +227,7 @@ NAV_METHOD = "📚  Method & sources"
 # simulation can jump the user straight to the results section)
 # ════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("## ⚖️ Policy levers")
+    st.markdown("## 🎛️ Policy levers")
     st.markdown("Set your objectives, then run the simulation.")
 
     labels = {f"{engine.country_flag(c['code'])}  {c['name']}": c
@@ -240,20 +240,20 @@ with st.sidebar:
 
     lo, hi = engine.RANGES["growth_target"]
     g_target = st.number_input(
-        "📈 GDP per-capita growth objective (%/yr)",
+        "🎯 GDP per-capita growth objective (%/yr)",
         min_value=lo, max_value=hi, value=3.50, step=0.20, format="%.2f",
         help=f"Type any value to two decimals, between {lo} and {hi}. "
              "The +/- buttons move by 0.2.")
     lo, hi = engine.RANGES["co2_growth"]
     co2_g = st.number_input(
-        "🌱 CO2 emissions growth (%/yr) — 0 or negative",
+        "🍃 CO2 emissions growth (%/yr) — 0 or negative",
         min_value=lo, max_value=hi, value=-2.00, step=0.20, format="%.2f",
         help="Negative = emissions decline. The Paris Agreement requires a "
              "declining path; positive values are not allowed. "
              "Type any value to two decimals (e.g. −1.35).")
     lo, hi = engine.RANGES["unemp_growth"]
     un_g = st.number_input(
-        "🤝 Unemployment rate growth (%/yr) — 0 or negative",
+        "💼 Unemployment rate growth (%/yr) — 0 or negative",
         min_value=lo, max_value=hi, value=-2.00, step=0.20, format="%.2f",
         help="Negative = unemployment falls (SDG 8). −2%/yr ≈ one fifth "
              "lower after a decade. Type any value to two decimals.")
@@ -321,7 +321,7 @@ with st.container(key="main-nav"):
 if nav == NAV_PROFILE:
 
     # ── Overview ──────────────────────────────────────────────────────────
-    band(f"📌 Overview — {sel['name']}")
+    band(f"✨ Overview — {sel['name']}")
     c1, c2 = st.columns([1.6, 1])
     with c1:
         map_df = pd.DataFrame({"iso3": [sel["iso3"]], "v": [1.0],
@@ -400,16 +400,27 @@ if nav == NAV_PROFILE:
         st.plotly_chart(style_axes(figs), use_container_width=True)
 
     # ── Trade structure ───────────────────────────────────────────────────
-    for flow, icon, verb in (("exports", "📤", "exported"),
-                             ("imports", "📥", "imported")):
+    for flow, icon, verb in (("exports", "🚢", "exported"),
+                             ("imports", "📦", "imported")):
         band(f"{icon} {flow.capitalize()} of {sel['name']}")
-        h1, h2, h3 = st.columns([1, 1, 2])
-        with h1:
+        # controls together: year + product to map, side by side
+        cy, cp = st.columns([1, 3])
+        with cy:
             y = st.selectbox("Year", trade["years"],
                              index=len(trade["years"]) - 1,
                              key=f"year_{flow}")
         tbl, total = engine.country_trade_table(
             trade, indicators["cls"], flow, sel["code"], y)
+        with cp:
+            pick = None
+            if len(tbl):
+                opts = [f"{r.Code} — {r.Product}"
+                        for r in tbl.head(400).itertuples()]
+                pick = st.selectbox(
+                    "Product to map", opts, key=f"prod_{flow}",
+                    help="Default: the country's top product. The map shows "
+                         "each country's share of world trade in it.")
+        h2, h3 = st.columns(2)
         h2.metric(f"Total {flow} ({y})", f"${total/1e9:,.1f} B")
         h3.metric("Products " + verb, f"{len(tbl):,}")
 
@@ -422,13 +433,7 @@ if nav == NAV_PROFILE:
                     f"Share of country {flow} (%)": "{:.2f}"}),
                 use_container_width=True, height=620)
         with cR:
-            if len(tbl):
-                opts = [f"{r.Code} — {r.Product}"
-                        for r in tbl.head(400).itertuples()]
-                pick = st.selectbox(
-                    "Product to map", opts, key=f"prod_{flow}",
-                    help="Default: the country's top product. The map shows "
-                         "each country's share of world trade in it.")
+            if pick is not None:
                 hs = pick.split(" — ")[0]
                 shares, world = engine.product_world_shares(
                     trade, flow, hs, y)
@@ -495,7 +500,7 @@ elif nav == NAV_RESULTS:
                   delta_color="off")
 
         # ── Product list ──────────────────────────────────────────────────
-        band("📋 Recommended products")
+        band("🏆 Recommended products")
         st.caption("Ordered by priority (lowest effort first). ‘Share of "
                    "GDP’ is the added export volume required to gain "
                    "comparative advantage, relative to latest GDP.")
@@ -507,7 +512,7 @@ elif nav == NAV_RESULTS:
             use_container_width=True, height=480)
         xlsx = engine.build_excel(res, models)
         st.download_button(
-            "⬇  Export products & summary (Excel, with metadata and sources)",
+            "💾  Export products & summary (Excel, with metadata and sources)",
             data=xlsx,
             file_name=(f"diversification_{s['ISO3']}_"
                        f"{s['Growth objective (%/yr)']}pct.xlsx"),
@@ -516,7 +521,7 @@ elif nav == NAV_RESULTS:
             use_container_width=True)
 
         # ── Portfolio charts ──────────────────────────────────────────────
-        band("🧭 Portfolio charts")
+        band("🎨 Portfolio charts")
         cA, cB = st.columns(2)
         with cA:
             figg = px.treemap(res["products"], path=["Group", "Name"],
