@@ -149,7 +149,42 @@ def _indicators():
     return engine.load_indicators()
 
 
+@st.cache_resource(show_spinner="Loading world trade panels …")
+def _trade():
+    return engine.load_trade()
+
+
+def world_share_map(shares, title, height=430, highlight=None):
+    """Choropleth of world-trade shares (%) with a neutral, eye-friendly
+    sequential palette. `highlight` (ISO3) outlines the selected country."""
+    fig = px.choropleth(
+        shares, locations="iso3", color="share_pct", hover_name="name",
+        color_continuous_scale="Blues", range_color=(0, None),
+        labels={"share_pct": "% of world"})
+    fig.update_traces(marker_line_color="#FFFFFF", marker_line_width=0.4,
+                      hovertemplate="<b>%{hovertext}</b><br>"
+                                    "%{z:.2f} % of world<extra></extra>")
+    if highlight is not None and highlight in set(shares["iso3"]):
+        hl = shares[shares["iso3"] == highlight]
+        fig.add_trace(go.Choropleth(
+            locations=hl["iso3"], z=hl["share_pct"], showscale=False,
+            colorscale=[[0, "rgba(0,0,0,0)"], [1, "rgba(0,0,0,0)"]],
+            marker_line_color=ACCENT, marker_line_width=2.5,
+            hoverinfo="skip"))
+    fig.update_geos(showcountries=True, countrycolor="#D8D2C4",
+                    showland=True, landcolor="#F2EFE7",
+                    showocean=True, oceancolor="#E9EEF0",
+                    projection_type="natural earth")
+    fig.update_layout(**PLOTLY_LAYOUT, height=height,
+                      title=dict(text=title, x=0.02),
+                      coloraxis_colorbar=dict(
+                          title="% of world", tickfont=dict(size=13),
+                          thickness=14, len=0.7))
+    return fig
+
+
 state, models, indicators = _state(), _models(), _indicators()
+trade = _trade()
 countries = engine.available_countries(state, models)
 
 NAV_PROFILE = "🗺️  Country profile"
@@ -325,6 +360,59 @@ if nav == NAV_PROFILE:
                            yaxis_title="% of employment", xaxis_title=None)
         st.plotly_chart(style_axes(figs), use_container_width=True)
 
+    # ── Trade structure: exports & imports ────────────────────────────────
+    st.markdown("---")
+    st.markdown(f"### 🚢 Trade structure of {sel['name']}")
+    st.caption("All traded products, ordered by value, with the world map "
+               "of each product's trade. The map shows every country's "
+               "share of WORLD trade in the selected product and year — "
+               "e.g. a value of 10% means that country accounts for one "
+               "tenth of world exports (or imports) of the product.")
+
+    for flow, icon, verb in (("exports", "📤", "exported"),
+                             ("imports", "📥", "imported")):
+        with st.expander(f"{icon}  {flow.capitalize()} of {sel['name']}",
+                         expanded=(flow == "exports")):
+            y = st.selectbox("Year", trade["years"],
+                             index=len(trade["years"]) - 1,
+                             key=f"year_{flow}")
+            tbl, total = engine.country_trade_table(
+                trade, indicators["cls"], flow, sel["code"], y)
+            st.metric(f"Total {flow} in {y}", f"${total/1e9:,.1f} B")
+
+            cL, cR = st.columns([1, 1.15])
+            with cL:
+                st.markdown(f"**Products {verb} in {y}** "
+                            f"({len(tbl)} products)")
+                st.dataframe(
+                    tbl.style.format({
+                        "Value (USD M)": "{:,.1f}",
+                        f"Share of country {flow} (%)": "{:.2f}"}),
+                    use_container_width=True, height=430)
+            with cR:
+                if len(tbl):
+                    opts = [f"{r.Code} — {r.Product}"
+                            for r in tbl.head(400).itertuples()]
+                    pick = st.selectbox(
+                        "Product to map", opts, key=f"prod_{flow}",
+                        help="Default: the country's top product. The map "
+                             "shows world shares for this product.")
+                    hs = pick.split(" — ")[0]
+                    shares, world = engine.product_world_shares(
+                        trade, flow, hs, y)
+                    own = shares.loc[shares["iso3"] == sel["iso3"],
+                                     "share_pct"]
+                    own_share = float(own.iloc[0]) if len(own) else 0.0
+                    st.plotly_chart(world_share_map(
+                        shares,
+                        f"World {flow} shares — {pick[:48]} ({y})",
+                        highlight=sel["iso3"]),
+                        use_container_width=True)
+                    st.caption(f"World {flow} of this product in {y}: "
+                               f"**${world/1e9:,.2f} B** — "
+                               f"{sel['name']}'s share: "
+                               f"**{own_share:.2f}%**.")
+
 # ════════════════════════════════════════════════════════════════════════════
 # Section 2 — Simulation results
 # ════════════════════════════════════════════════════════════════════════════
@@ -409,6 +497,60 @@ elif nav == NAV_RESULTS:
                                                "portfolio", x=0.02),
                                legend=dict(font=dict(size=12)))
             st.plotly_chart(style_axes(fige), use_container_width=True)
+
+        # ── World market for each recommended product ────────────────────
+        st.markdown("---")
+        st.markdown("#### 🌐 World market for a recommended product")
+        st.caption("Pick any product from the recommendation list to see "
+                   "how the world market is structured: who the "
+                   "**competitors** are (each country's share of world "
+                   "exports) and where the **demand** is concentrated "
+                   "(each country's share of world imports).")
+
+        pr = res["products"]
+        popts = [f"{r.Product} — {r.Name}" for r in pr.itertuples()]
+        cP, cY = st.columns([3, 1])
+        with cP:
+            ppick = st.selectbox("Recommended product", popts,
+                                 key="market_prod")
+        with cY:
+            py = st.selectbox("Year", trade["years"],
+                              index=len(trade["years"]) - 1,
+                              key="market_year")
+        hs = ppick.split(" — ")[0]
+
+        exp_sh, exp_w = engine.product_world_shares(trade, "exports", hs, py)
+        imp_sh, imp_w = engine.product_world_shares(trade, "imports", hs, py)
+        own_e = exp_sh.loc[exp_sh["iso3"] == s["ISO3"], "share_pct"]
+        own_e = float(own_e.iloc[0]) if len(own_e) else 0.0
+        own_i = imp_sh.loc[imp_sh["iso3"] == s["ISO3"], "share_pct"]
+        own_i = float(own_i.iloc[0]) if len(own_i) else 0.0
+
+        w1, w2, w3 = st.columns(3)
+        w1.metric("World trade in this product",
+                  f"${exp_w/1e9:,.2f} B ({py})")
+        w2.metric(f"{st.session_state['result_country']}'s export share",
+                  f"{own_e:.2f} %")
+        w3.metric(f"{st.session_state['result_country']}'s import share",
+                  f"{own_i:.2f} %")
+
+        cE, cI = st.columns(2)
+        with cE:
+            st.plotly_chart(world_share_map(
+                exp_sh, f"Competitors — world EXPORT shares ({py})",
+                height=400, highlight=s["ISO3"]),
+                use_container_width=True)
+            top5 = exp_sh.head(5)
+            st.caption("Top exporters: " + ", ".join(
+                f"{r.name} ({r.share_pct:.1f}%)" for r in top5.itertuples()))
+        with cI:
+            st.plotly_chart(world_share_map(
+                imp_sh, f"Demand — world IMPORT shares ({py})",
+                height=400, highlight=s["ISO3"]),
+                use_container_width=True)
+            top5 = imp_sh.head(5)
+            st.caption("Top importers: " + ", ".join(
+                f"{r.name} ({r.share_pct:.1f}%)" for r in top5.itertuples()))
 
         xlsx = engine.build_excel(res, models)
         st.download_button(

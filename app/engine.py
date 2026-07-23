@@ -343,6 +343,50 @@ def timeseries(indicators, iso3):
 
 
 # ---------------------------------------------------------------------------
+# Trade structure (precomputed country × product × year aggregates)
+# ---------------------------------------------------------------------------
+def load_trade():
+    """Compact export/import panels built by build_trade_aggregates.py."""
+    exp = pd.read_parquet(os.path.join(cfg.DATA_DIR, "trade_exports.parquet"))
+    imp = pd.read_parquet(os.path.join(cfg.DATA_DIR, "trade_imports.parquet"))
+    years = sorted(int(y) for y in exp["year"].unique())
+    return {"exports": exp, "imports": imp, "years": years}
+
+
+def country_trade_table(trade, cls, flow, code, year):
+    """All products a country trades in `year`, ordered by value.
+    flow: 'exports' or 'imports'; code: lowercase iso3."""
+    df = trade[flow]
+    sub = df[(df["country"] == code) & (df["year"] == year)]
+    total = float(sub["value"].sum())
+    out = (sub.groupby("hs_code", observed=True, as_index=False)["value"]
+           .sum().sort_values("value", ascending=False))
+    out["hs_code"] = out["hs_code"].astype(str)
+    m = cls.set_index("code_trade")
+    out.insert(1, "Product", out["hs_code"].map(m["product_name"]).fillna(""))
+    out.insert(2, "Sector", out["hs_code"].map(m["section"]).fillna(""))
+    out["Value (USD M)"] = out["value"] / 1e6
+    out["Share of country " + flow + " (%)"] = (
+        out["value"] / total * 100 if total else np.nan)
+    out = out.drop(columns="value").rename(columns={"hs_code": "Code"})
+    return out.reset_index(drop=True), total
+
+
+def product_world_shares(trade, flow, hs_code, year):
+    """Each country's share (%) of WORLD trade in one product and year.
+    Returns (DataFrame[iso3, value, share_pct], world_total_usd)."""
+    df = trade[flow]
+    sub = df[(df["hs_code"] == hs_code) & (df["year"] == year)]
+    world = float(sub["value"].sum())
+    out = (sub.groupby("country", observed=True, as_index=False)["value"]
+           .sum())
+    out["iso3"] = out["country"].astype(str).str.upper()
+    out["share_pct"] = out["value"] / world * 100 if world else np.nan
+    out["name"] = out["iso3"].map(lambda x: country_name(x))
+    return out.sort_values("share_pct", ascending=False), world
+
+
+# ---------------------------------------------------------------------------
 # Excel export
 # ---------------------------------------------------------------------------
 def build_excel(result, models):
