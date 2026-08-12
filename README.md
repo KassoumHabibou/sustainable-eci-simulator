@@ -1,12 +1,7 @@
 # ECI Optimization — CO2 & Employment Extension (complete simulation)
 
 Extension of **Stojkoski & Hidalgo, "Optimizing Economic Complexity"**.
-The forecast model (paper Eq. 2) and the 0-1 integer optimization (the LP)
-are the **authors' code, unchanged**. The extension enters only through the
-growth regression (paper Eq. 3), which is augmented with CO2-emissions
-growth and the unemployment rate. Inverting the two regressions at the same
-3.5 % growth target produces two different ECI targets, and therefore two
-different optimal specialization portfolios.
+
 
 ## Folder layout
 
